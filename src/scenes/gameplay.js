@@ -73,5 +73,5 @@ function create() {
 function update(time, delta) {
     controls.update(delta);
 
-    Phaser.Actions.Rotate(cards.getChildren(), 0.01);
+    //Phaser.Actions.Rotate(cards.getChildren(), 0.01);
 }

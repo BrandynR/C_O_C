@@ -21,7 +21,7 @@ export class MenuScene extends Phaser.Scene {
         //create sprites (if using pixel art, remove sharpen)
 
         let hovering = this.add.image(50, 50, "potion").setDepth(1);
-        hovering.setScale(1 / 20);
+        hovering.setScale(1 / 15);
         hovering.setVisible(false);
 
         //create audio, disable pauseonblur
