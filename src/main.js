@@ -6,7 +6,7 @@ import { PlayScene } from "./scenes/PlayScene";
 
 let game = new Phaser.Game({
     width: 1000,
-    height: 800,
+    height: 700,
     scene: [
         LoadScene, MenuScene, PlayScene
     ],

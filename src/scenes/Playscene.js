@@ -43,15 +43,15 @@ export class PlayScene extends Phaser.Scene {
         //this.wiz2.scale.setTo(-1, 1);
 
         //Load cards
-        let Earth = this.add.sprite(90, 625, "earth").setDepth(1);
+        let Earth = this.add.sprite(90, 575, "earth").setDepth(1);
         Earth.setScale(0.70);
-        let Air = this.add.sprite(300, 625, "air").setDepth(1);
+        let Air = this.add.sprite(300, 575, "air").setDepth(1);
         Air.setScale(0.70);
-        let Fire = this.add.sprite(510, 625, "fire").setDepth(1);
+        let Fire = this.add.sprite(510, 575, "fire").setDepth(1);
         Fire.setScale(0.70);
-        let Water = this.add.sprite(720, 625, "water").setDepth(1);
+        let Water = this.add.sprite(720, 575, "water").setDepth(1);
         Water.setScale(0.70);
-        let Earth2 = this.add.sprite(910, 625, "earth").setDepth(1);
+        let Earth2 = this.add.sprite(910, 575, "earth").setDepth(1);
         Earth2.setScale(0.70);
 
         // sprite
