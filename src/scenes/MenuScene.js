@@ -16,6 +16,7 @@ export class MenuScene extends Phaser.Scene {
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "logo").setDepth(1);
         this.add.image(0, 0, "title_bg").setOrigin(0).setDepth(0);
         let playButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 100, "play_button").setDepth(1);
+        this.load.image("options_button", "./assets/options_button.png");
         //this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 100, "options_button").setDepth(1);
 
         //create sprites (if using pixel art, remove sharpen)
@@ -43,15 +44,17 @@ export class MenuScene extends Phaser.Scene {
             hovering.setVisible(true);
             hovering.x = playButton.x - playButton.width;
             hovering.y = playButton.y;
-
+            playButton.setTint(0xff0000);
         })
 
         playButton.on("pointerout", () => {
             hovering.setVisible(false);
+            playButton.clearTint();
         })
 
         playButton.on("pointerup", () => {
             this.scene.start(CST.SCENES.PLAY, "hi from MenuScreen");
-        })
+
+        }, )
     }
 }
