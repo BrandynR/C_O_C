@@ -27,6 +27,7 @@ export class PlayScene extends Phaser.Scene {
         this.load.image('block', './assets/tiny2.png');
         this.load.image('green-bar', './assets/images/health-green.png');
         this.load.image('red-bar', './assets/images/health-red.png');
+        this.load.image("text", "./assets/Choose-Your-Attack.png")
 
         this.load.once("loaderror", function(file) {
             console.log(file)
@@ -35,6 +36,7 @@ export class PlayScene extends Phaser.Scene {
     }
     create() {
         this.add.image(0, 0, "terrain").setOrigin(0).setDepth(0);
+        this.add.image(500, 740, "text").setDepth(1);
 
         let Player1 = this.add.sprite(225, 300, "wiz1").setDepth(1);
         Player1.setScale(0.75);
