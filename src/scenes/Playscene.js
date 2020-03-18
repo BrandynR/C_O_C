@@ -3,6 +3,8 @@ import { CharacterSprite } from "../CharacterSprite";
 import { Sprite } from "../Sprite";
 
 var Player1;
+var healthBar;
+var Player2;
 export class PlayScene extends Phaser.Scene {
 
     constructor() {
@@ -18,12 +20,13 @@ export class PlayScene extends Phaser.Scene {
         this.load.image("wiz1", "./assets.firewiz.png")
         this.load.image("wiz2", "./assets.iceopponent.png")
         this.load.image("terrain", "./assets/forestday.png");
-        this.load.multiatlas('players', "./assets/players.json", "players");
         this.load.image("earth", "./assets/earth_card.png")
         this.load.image("air", "./assets/air_card.png")
         this.load.image("fire", "./assets/fire_card.png")
         this.load.image("water", "./assets/water_card.png")
-        this.load.image('block', 'assets/tiny2.png');
+        this.load.image('block', './assets/tiny2.png');
+        this.load.image('green-bar', './assets/images/health-green.png');
+        this.load.image('red-bar', './assets/images/health-red.png');
 
         this.load.once("loaderror", function(file) {
             console.log(file)
@@ -32,14 +35,16 @@ export class PlayScene extends Phaser.Scene {
     }
     create() {
         this.add.image(0, 0, "terrain").setOrigin(0).setDepth(0);
+
         let Player1 = this.add.sprite(225, 300, "wiz1").setDepth(1);
         Player1.setScale(0.75);
+        Player1.health = 100;
+        Player1.maxHealth = 100;
+
         let Player2 = this.add.sprite(750, 290, "wiz2").setDepth(1);
         Player2.setScale(0.75);
-        //this.wiz2 = this.add.sprite(750, 290, "wiz2")
-        //this.wiz2.setScale(0.75);
-        //this.wiz2.anchor.setTo(0.5);
-        //this.wiz2.scale.setTo(-1, 1);
+        Player2.health = 100;
+        PlayScene.maxHealth = 100;
 
         //Load cards
         let Earth = this.add.sprite(90, 575, "earth").setDepth(1);
@@ -55,7 +60,6 @@ export class PlayScene extends Phaser.Scene {
 
         //Checkerboard transition
         var blocks = this.add.group({ key: 'block', repeat: 300 }).setDepth(1);
-        //blocks.setScale(1 / 15);
 
         Phaser.Actions.GridAlign(blocks.getChildren(), {
             width: 21,
@@ -90,15 +94,11 @@ export class PlayScene extends Phaser.Scene {
                 i = 0;
             }
 
-            // sprite
-            /*        capguy = this.add.sprite(0, 400, 'Wizard1', "PNG/wizard/5_ATTACK_004.png");
-                    capguy.setScale(0.5, 0.5);
-
-                    // animation
-                    var frameNames = this.anims.generateFrameNames('Wizard1', { start: 1, end: 8, zeroPad: 4, prefix: 'PNG/wizard/', suffix: '.png' });
-                    this.anims.create({ key: 'attack', frames: frameNames, frameRate: 10, repeat: -1 });
-                    Player1.anims.play('attack');
-            */
         });
+
     }
+    update() {
+
+    }
+
 }

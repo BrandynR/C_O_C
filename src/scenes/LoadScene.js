@@ -13,17 +13,15 @@ export class LoadScene extends Phaser.Scene {
         // Load images, spritesheet, and sound
         this.load.image("terrain", "./assets/image/forestday.png");
         this.load.image("title_bg", "./assets/forestnight.png");
-        this.load.image("options_button", "./assets/options_button.png");
         this.load.image("play_button", "./assets/play_button.png");
         this.load.image("logo", "./assets/text_logo.png");
         this.load.image("potion", "./assets/potionred04.png");
-        this.load.audio("title_music", "./assets/shuinvy-childhood.mp3");
         this.load.image("wiz1", "./assets/firewiz.png");
         this.load.image("wiz2", "./assets/iceopponent.png");
-        this.load.image("earth", "./assets/earth_card.png")
-        this.load.image("air", "./assets/air_card.png")
-        this.load.image("fire", "./assets/fire_card.png")
-        this.load.image("water", "./assets/water_card.png")
+        //   this.load.image("earth", "./assets/earth_card.png")
+        //   this.load.image("air", "./assets/air_card.png")
+        //   this.load.image("fire", "./assets/fire_card.png")
+        //   this.load.image("water", "./assets/water_card.png")
 
         // Create Loading Bar
         let loadingBar = this.add.graphics({

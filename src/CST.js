@@ -11,6 +11,10 @@ export const CST = {
         POTION: "potion.png",
         BACKGROUND: "forestday.png"
     },
+    GAME: {
+        PLAYER_HEALTH: 100,
+        PLAYER_DMG: 10
+    },
     AUDIO: {
         TITLE: "shuinvy-childhood.mp3"
     }
