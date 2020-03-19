@@ -1,5 +1,5 @@
-import { CST } from "../CST";
-import { PlayScene } from "./PlayScene";
+import { CST } from "../CST.js";
+import { PlayScene } from "./PlayScene.js";
 export class MenuScene extends Phaser.Scene {
     constructor() {
         super({
