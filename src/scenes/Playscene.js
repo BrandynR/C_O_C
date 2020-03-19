@@ -212,11 +212,5 @@ export class PlayScene extends Phaser.Scene {
         })
 
     }
-    update() {
-        // healthBar.scale.setTo(Player1.health / player.maxHealth, 1);
-    }
-
-    //function damage(Player2.health) {
-    //   return (Player2.health - 10);
-    // }
+    update() {}
 }
