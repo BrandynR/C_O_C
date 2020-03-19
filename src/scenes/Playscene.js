@@ -6,6 +6,10 @@ var Player1;
 var healthBar;
 var Player2;
 var healthBar2;
+
+function damagePlayer(player) {
+    player.health -= 10;
+}
 export class PlayScene extends Phaser.Scene {
 
     constructor() {
@@ -47,7 +51,7 @@ export class PlayScene extends Phaser.Scene {
         let Player2 = this.add.sprite(750, 290, "wiz2").setDepth(1);
         Player2.setScale(0.75);
         Player2.health = 100;
-        PlayScene.maxHealth = 100;
+        Player2.maxHealth = 100;
 
         //Load cards
         let Earth = this.add.sprite(90, 575, "earth").setDepth(1);
@@ -102,27 +106,28 @@ export class PlayScene extends Phaser.Scene {
         var backgroundBar = this.add.image(110, 20, 'red-bar');
         backgroundBar.fixedToCamera = true;
 
-        healthBar = this.add.image(110, 20, 'green-bar');
+        healthBar = this.add.sprite(110, 20, 'green-bar');
         healthBar.fixedToCamera = true;
 
         // add text label to left of bar
         var healthLabel = this.add.text(215, 20, 'Player 1', { fontSize: '20px', fill: '#ffffff' });
+        this.add.text(250, 40, Player1.health, { fontSize: '20px', fill: '#ffffff' });
         healthLabel.fixedToCamera = true;
-
-        // healthBar.scale.setTo(player.health / player.maxHealth, 1);
+        // Scale the health to account for damage
+        //healthBar.scale.setTo(Player1.health / Player1.maxHealth, 1);
 
         // Create opponenet health bar
         var backgroundBar2 = this.add.image(890, 20, 'red-bar');
         backgroundBar2.fixedToCamera = true;
 
-        healthBar2 = this.add.image(890, 20, 'green-bar');
+        healthBar2 = this.add.sprite(890, 20, 'green-bar');
         healthBar2.fixedToCamera = true;
 
         // add text label to left of bar
         var healthLabel2 = this.add.text(690, 20, 'Player 2', { fontSize: '20px', fill: '#ffffff' });
         healthLabel2.fixedToCamera = true;
-
-        // healthBar.scale.setTo(player.health / player.maxHealth, 1);
+        // Scale the health to account for damage
+        //healthBar2.scale.setTo(Player2.health / Player2.maxHealth, 1);
 
 
         /*
@@ -145,8 +150,8 @@ export class PlayScene extends Phaser.Scene {
 
         // Once card is clicked, deal damage
         Earth.on("pointerup", () => {
-            // Player1.damage(10);
-            healthBar.scale.setTo(1 / 10);
+            damagePlayer(Player2);
+            healthBar2.scaleX = (Player2.health / Player2.maxHealth);
         })
 
         Air.on("pointerover", () => {
@@ -159,8 +164,8 @@ export class PlayScene extends Phaser.Scene {
 
         // Once card is clicked, deal damage
         Air.on("pointerup", () => {
-            // Player1.damage(10);
-            healthBar.scale.setTo(1 / 10);
+            damagePlayer(Player2);
+            healthBar2.scaleX = (Player2.health / Player2.maxHealth);
         })
 
         Fire.on("pointerover", () => {
@@ -173,8 +178,8 @@ export class PlayScene extends Phaser.Scene {
 
         // Once card is clicked, deal damage
         Fire.on("pointerup", () => {
-            // Player1.damage(10);
-            healthBar.scale.setTo(1 / 10);
+            damagePlayer(Player2);
+            healthBar2.scaleX = (Player2.health / Player2.maxHealth);
         })
 
         Water.on("pointerover", () => {
@@ -187,8 +192,8 @@ export class PlayScene extends Phaser.Scene {
 
         // Once card is clicked, deal damage
         Water.on("pointerup", () => {
-            // Player1.damage(10);
-            healthBar.scale.setTo(1 / 10);
+            damagePlayer(Player2);
+            healthBar2.scaleX = (Player2.health / Player2.maxHealth);
         })
 
         Earth2.on("pointerover", () => {
@@ -201,8 +206,8 @@ export class PlayScene extends Phaser.Scene {
 
         // Once card is clicked, deal damage
         Earth2.on("pointerup", () => {
-            // Player1.damage(10);
-            healthBar.scale.setTo(1 / 10);
+            damagePlayer(Player2);
+            healthBar2.scaleX = (Player2.health / Player2.maxHealth);
         })
 
     }
@@ -210,4 +215,7 @@ export class PlayScene extends Phaser.Scene {
         // healthBar.scale.setTo(Player1.health / player.maxHealth, 1);
     }
 
+    //function damage(Player2.health) {
+    //   return (Player2.health - 10);
+    // }
 }
