@@ -1,0 +1,2899 @@
+{
+	"textures": [
+		{
+			"image": "players-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2013,
+				"h": 2046
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "PNG/wizard/5_ATTACK_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 685,
+						"h": 474
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 0,
+						"w": 659,
+						"h": 414
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 659,
+						"h": 414
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/5_ATTACK_006.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 698,
+						"h": 483
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 32,
+						"w": 649,
+						"h": 400
+					},
+					"frame": {
+						"x": 0,
+						"y": 414,
+						"w": 649,
+						"h": 400
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/5_ATTACK_006.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 652,
+						"h": 476
+					},
+					"spriteSourceSize": {
+						"x": 58,
+						"y": 16,
+						"w": 594,
+						"h": 408
+					},
+					"frame": {
+						"x": 659,
+						"y": 0,
+						"w": 594,
+						"h": 408
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/5_ATTACK_005.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 652,
+						"h": 476
+					},
+					"spriteSourceSize": {
+						"x": 57,
+						"y": 15,
+						"w": 431,
+						"h": 413
+					},
+					"frame": {
+						"x": 0,
+						"y": 814,
+						"w": 431,
+						"h": 413
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/3_RUN_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 471
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 18,
+						"w": 419,
+						"h": 402
+					},
+					"frame": {
+						"x": 1253,
+						"y": 0,
+						"w": 419,
+						"h": 402
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/3_RUN_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 473,
+						"h": 466
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 20,
+						"w": 341,
+						"h": 413
+					},
+					"frame": {
+						"x": 1672,
+						"y": 0,
+						"w": 341,
+						"h": 413
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/3_RUN_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 471
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 18,
+						"w": 419,
+						"h": 399
+					},
+					"frame": {
+						"x": 0,
+						"y": 1227,
+						"w": 419,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/3_RUN_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 473,
+						"h": 466
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 18,
+						"w": 381,
+						"h": 410
+					},
+					"frame": {
+						"x": 0,
+						"y": 1626,
+						"w": 381,
+						"h": 410
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/2_WALK_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 410,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 7,
+						"w": 339,
+						"h": 392
+					},
+					"frame": {
+						"x": 431,
+						"y": 814,
+						"w": 339,
+						"h": 392
+					}
+				},
+				{
+					"filename": "PNG/wizard/6_HURT_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 490,
+						"h": 387
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 35,
+						"w": 429,
+						"h": 335
+					},
+					"frame": {
+						"x": 659,
+						"y": 408,
+						"w": 429,
+						"h": 335
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/4_JUMP_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 392,
+						"h": 472
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 16,
+						"w": 374,
+						"h": 383
+					},
+					"frame": {
+						"x": 770,
+						"y": 743,
+						"w": 374,
+						"h": 383
+					}
+				},
+				{
+					"filename": "PNG/wizard/6_HURT_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 490,
+						"h": 387
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 36,
+						"w": 429,
+						"h": 334
+					},
+					"frame": {
+						"x": 1088,
+						"y": 408,
+						"w": 429,
+						"h": 334
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/6_HURT_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 508,
+						"h": 455
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 67,
+						"w": 426,
+						"h": 362
+					},
+					"frame": {
+						"x": 1144,
+						"y": 742,
+						"w": 426,
+						"h": 362
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_53.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 166,
+						"h": 364
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 11,
+						"w": 121,
+						"h": 340
+					},
+					"frame": {
+						"x": 1517,
+						"y": 402,
+						"w": 121,
+						"h": 340
+					}
+				},
+				{
+					"filename": "PNG/wizard/5_ATTACK_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 685,
+						"h": 474
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 66,
+						"w": 368,
+						"h": 344
+					},
+					"frame": {
+						"x": 1638,
+						"y": 413,
+						"w": 368,
+						"h": 344
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/6_HURT_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 508,
+						"h": 455
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 67,
+						"w": 426,
+						"h": 362
+					},
+					"frame": {
+						"x": 1570,
+						"y": 757,
+						"w": 426,
+						"h": 362
+					}
+				},
+				{
+					"filename": "PNG/wizard/5_ATTACK_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 685,
+						"h": 474
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 38,
+						"w": 315,
+						"h": 380
+					},
+					"frame": {
+						"x": 381,
+						"y": 1626,
+						"w": 315,
+						"h": 380
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_50.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 166,
+						"h": 409
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 34,
+						"w": 121,
+						"h": 363
+					},
+					"frame": {
+						"x": 419,
+						"y": 1227,
+						"w": 121,
+						"h": 363
+					}
+				},
+				{
+					"filename": "SCML/1/ice_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 254,
+						"h": 330
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 254,
+						"h": 330
+					},
+					"frame": {
+						"x": 540,
+						"y": 1206,
+						"w": 254,
+						"h": 330
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/7_DIE_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 373,
+						"h": 411
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 94,
+						"w": 269,
+						"h": 304
+					},
+					"frame": {
+						"x": 794,
+						"y": 1126,
+						"w": 269,
+						"h": 304
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_56.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 166,
+						"h": 364
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 29,
+						"w": 122,
+						"h": 315
+					},
+					"frame": {
+						"x": 1063,
+						"y": 1126,
+						"w": 122,
+						"h": 315
+					}
+				},
+				{
+					"filename": "SCML/3/ice_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 240,
+						"h": 328
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 231,
+						"h": 328
+					},
+					"frame": {
+						"x": 1185,
+						"y": 1104,
+						"w": 231,
+						"h": 328
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/7_DIE_007.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 380,
+						"h": 425
+					},
+					"spriteSourceSize": {
+						"x": 22,
+						"y": 102,
+						"w": 260,
+						"h": 287
+					},
+					"frame": {
+						"x": 1416,
+						"y": 1119,
+						"w": 260,
+						"h": 287
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/7_DIE_006.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 373,
+						"h": 411
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 112,
+						"w": 260,
+						"h": 286
+					},
+					"frame": {
+						"x": 1676,
+						"y": 1119,
+						"w": 260,
+						"h": 286
+					}
+				},
+				{
+					"filename": "PNG/wizard/7_DIE_005.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 363
+					},
+					"spriteSourceSize": {
+						"x": 22,
+						"y": 104,
+						"w": 265,
+						"h": 243
+					},
+					"frame": {
+						"x": 794,
+						"y": 1430,
+						"w": 265,
+						"h": 243
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/7_DIE_009.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 380,
+						"h": 425
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 148,
+						"w": 261,
+						"h": 236
+					},
+					"frame": {
+						"x": 696,
+						"y": 1673,
+						"w": 261,
+						"h": 236
+					}
+				},
+				{
+					"filename": "SCML/2/ice_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 204,
+						"h": 244
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 190,
+						"h": 244
+					},
+					"frame": {
+						"x": 1059,
+						"y": 1441,
+						"w": 190,
+						"h": 244
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/7_DIE_008.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 373,
+						"h": 411
+					},
+					"spriteSourceSize": {
+						"x": 27,
+						"y": 158,
+						"w": 261,
+						"h": 235
+					},
+					"frame": {
+						"x": 1249,
+						"y": 1432,
+						"w": 261,
+						"h": 235
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 278,
+						"h": 228
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 4,
+						"w": 260,
+						"h": 214
+					},
+					"frame": {
+						"x": 957,
+						"y": 1685,
+						"w": 260,
+						"h": 214
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 184,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 17,
+						"w": 164,
+						"h": 227
+					},
+					"frame": {
+						"x": 1510,
+						"y": 1406,
+						"w": 164,
+						"h": 227
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 184,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 17,
+						"w": 164,
+						"h": 227
+					},
+					"frame": {
+						"x": 1510,
+						"y": 1406,
+						"w": 164,
+						"h": 227
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 184,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 17,
+						"w": 164,
+						"h": 227
+					},
+					"frame": {
+						"x": 1510,
+						"y": 1406,
+						"w": 164,
+						"h": 227
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/7_DIE_011.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 373,
+						"h": 411
+					},
+					"spriteSourceSize": {
+						"x": 27,
+						"y": 194,
+						"w": 261,
+						"h": 199
+					},
+					"frame": {
+						"x": 1249,
+						"y": 1667,
+						"w": 261,
+						"h": 199
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 278,
+						"h": 228
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 13,
+						"w": 260,
+						"h": 211
+					},
+					"frame": {
+						"x": 1510,
+						"y": 1633,
+						"w": 260,
+						"h": 211
+					}
+				},
+				{
+					"filename": "PNG/wizard/7_DIE_008.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 363
+					},
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 151,
+						"w": 259,
+						"h": 182
+					},
+					"frame": {
+						"x": 1510,
+						"y": 1844,
+						"w": 259,
+						"h": 182
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 274,
+						"h": 166
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 259,
+						"h": 147
+					},
+					"frame": {
+						"x": 957,
+						"y": 1899,
+						"w": 259,
+						"h": 147
+					}
+				},
+				{
+					"filename": "PNG/wizard/7_DIE_011.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 363
+					},
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 169,
+						"w": 259,
+						"h": 164
+					},
+					"frame": {
+						"x": 1676,
+						"y": 1405,
+						"w": 259,
+						"h": 164
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_59.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 238,
+						"h": 220
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 20,
+						"w": 226,
+						"h": 189
+					},
+					"frame": {
+						"x": 1770,
+						"y": 1569,
+						"w": 226,
+						"h": 189
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_22.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 238,
+						"h": 220
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 21,
+						"w": 226,
+						"h": 188
+					},
+					"frame": {
+						"x": 1770,
+						"y": 1758,
+						"w": 226,
+						"h": 188
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_40.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 118,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 9,
+						"w": 94,
+						"h": 71
+					},
+					"frame": {
+						"x": 649,
+						"y": 743,
+						"w": 94,
+						"h": 71
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_62.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 238,
+						"h": 193
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 17,
+						"w": 213,
+						"h": 159
+					},
+					"frame": {
+						"x": 1217,
+						"y": 1866,
+						"w": 213,
+						"h": 159
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_28.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 118,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 10,
+						"w": 94,
+						"h": 71
+					},
+					"frame": {
+						"x": 696,
+						"y": 1909,
+						"w": 94,
+						"h": 71
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_31.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 118,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 16,
+						"y": 9,
+						"w": 94,
+						"h": 71
+					},
+					"frame": {
+						"x": 790,
+						"y": 1909,
+						"w": 94,
+						"h": 71
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 91,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 10,
+						"w": 58,
+						"h": 74
+					},
+					"frame": {
+						"x": 1936,
+						"y": 1119,
+						"w": 58,
+						"h": 74
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 91,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 10,
+						"w": 58,
+						"h": 74
+					},
+					"frame": {
+						"x": 1936,
+						"y": 1119,
+						"w": 58,
+						"h": 74
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 91,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 10,
+						"w": 58,
+						"h": 74
+					},
+					"frame": {
+						"x": 1936,
+						"y": 1119,
+						"w": 58,
+						"h": 74
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_25.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 24,
+						"w": 82,
+						"h": 49
+					},
+					"frame": {
+						"x": 540,
+						"y": 1536,
+						"w": 82,
+						"h": 49
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_25.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 24,
+						"w": 82,
+						"h": 49
+					},
+					"frame": {
+						"x": 540,
+						"y": 1536,
+						"w": 82,
+						"h": 49
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_25.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 24,
+						"w": 82,
+						"h": 49
+					},
+					"frame": {
+						"x": 540,
+						"y": 1536,
+						"w": 82,
+						"h": 49
+					}
+				},
+				{
+					"filename": "SCML/1/hand1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 132,
+						"h": 157
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 58,
+						"w": 69,
+						"h": 61
+					},
+					"frame": {
+						"x": 1430,
+						"y": 1866,
+						"w": 69,
+						"h": 61
+					}
+				},
+				{
+					"filename": "SCML/2/hand1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 132,
+						"h": 157
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 58,
+						"w": 69,
+						"h": 61
+					},
+					"frame": {
+						"x": 1430,
+						"y": 1866,
+						"w": 69,
+						"h": 61
+					}
+				},
+				{
+					"filename": "SCML/3/hand1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 132,
+						"h": 157
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 58,
+						"w": 69,
+						"h": 61
+					},
+					"frame": {
+						"x": 1430,
+						"y": 1866,
+						"w": 69,
+						"h": 61
+					}
+				},
+				{
+					"filename": "SCML/1/wizard_ice_cs4_43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 57,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 17,
+						"w": 37,
+						"h": 62
+					},
+					"frame": {
+						"x": 884,
+						"y": 1909,
+						"w": 37,
+						"h": 62
+					}
+				},
+				{
+					"filename": "SCML/2/wizard_ice_cs4_43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 57,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 17,
+						"w": 37,
+						"h": 62
+					},
+					"frame": {
+						"x": 884,
+						"y": 1909,
+						"w": 37,
+						"h": 62
+					}
+				},
+				{
+					"filename": "SCML/3/wizard_ice_cs4_43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 57,
+						"h": 92
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 17,
+						"w": 37,
+						"h": 62
+					},
+					"frame": {
+						"x": 884,
+						"y": 1909,
+						"w": 37,
+						"h": 62
+					}
+				}
+			]
+		},
+		{
+			"image": "players-1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1958,
+				"h": 1999
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "PNG/wizard_ice/6_HURT_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 501,
+						"h": 447
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 41,
+						"w": 416,
+						"h": 398
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 416,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/6_HURT_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 501,
+						"h": 447
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 41,
+						"w": 416,
+						"h": 398
+					},
+					"frame": {
+						"x": 0,
+						"y": 398,
+						"w": 416,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/3_RUN_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 473,
+						"h": 466
+					},
+					"spriteSourceSize": {
+						"x": 50,
+						"y": 20,
+						"w": 394,
+						"h": 408
+					},
+					"frame": {
+						"x": 416,
+						"y": 0,
+						"w": 394,
+						"h": 408
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/3_RUN_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 473,
+						"h": 466
+					},
+					"spriteSourceSize": {
+						"x": 50,
+						"y": 20,
+						"w": 394,
+						"h": 408
+					},
+					"frame": {
+						"x": 0,
+						"y": 796,
+						"w": 394,
+						"h": 408
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/6_HURT_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 501,
+						"h": 447
+					},
+					"spriteSourceSize": {
+						"x": 75,
+						"y": 27,
+						"w": 392,
+						"h": 405
+					},
+					"frame": {
+						"x": 810,
+						"y": 0,
+						"w": 392,
+						"h": 405
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/6_HURT_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 501,
+						"h": 447
+					},
+					"spriteSourceSize": {
+						"x": 75,
+						"y": 27,
+						"w": 392,
+						"h": 405
+					},
+					"frame": {
+						"x": 0,
+						"y": 1204,
+						"w": 392,
+						"h": 405
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/3_RUN_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 473,
+						"h": 466
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 18,
+						"w": 381,
+						"h": 410
+					},
+					"frame": {
+						"x": 1202,
+						"y": 0,
+						"w": 381,
+						"h": 410
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/6_HURT_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 508,
+						"h": 455
+					},
+					"spriteSourceSize": {
+						"x": 75,
+						"y": 40,
+						"w": 394,
+						"h": 382
+					},
+					"frame": {
+						"x": 416,
+						"y": 408,
+						"w": 394,
+						"h": 382
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/6_HURT_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 508,
+						"h": 455
+					},
+					"spriteSourceSize": {
+						"x": 75,
+						"y": 40,
+						"w": 394,
+						"h": 382
+					},
+					"frame": {
+						"x": 0,
+						"y": 1609,
+						"w": 394,
+						"h": 382
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/3_RUN_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 471
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 24,
+						"w": 382,
+						"h": 397
+					},
+					"frame": {
+						"x": 810,
+						"y": 405,
+						"w": 382,
+						"h": 397
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/2_WALK_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 409,
+						"h": 420
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 6,
+						"w": 365,
+						"h": 401
+					},
+					"frame": {
+						"x": 1583,
+						"y": 0,
+						"w": 365,
+						"h": 401
+					}
+				},
+				{
+					"filename": "PNG/wizard/4_JUMP_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 436
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 2,
+						"w": 384,
+						"h": 377
+					},
+					"frame": {
+						"x": 1192,
+						"y": 410,
+						"w": 384,
+						"h": 377
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/5_ATTACK_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 698,
+						"h": 483
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 25,
+						"w": 343,
+						"h": 408
+					},
+					"frame": {
+						"x": 394,
+						"y": 796,
+						"w": 343,
+						"h": 408
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/5_ATTACK_005.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 698,
+						"h": 483
+					},
+					"spriteSourceSize": {
+						"x": 43,
+						"y": 30,
+						"w": 327,
+						"h": 402
+					},
+					"frame": {
+						"x": 392,
+						"y": 1204,
+						"w": 327,
+						"h": 402
+					}
+				},
+				{
+					"filename": "PNG/wizard/4_JUMP_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 436
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 3,
+						"w": 384,
+						"h": 376
+					},
+					"frame": {
+						"x": 394,
+						"y": 1606,
+						"w": 384,
+						"h": 376
+					}
+				},
+				{
+					"filename": "PNG/wizard/3_RUN_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 488,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 43,
+						"y": 48,
+						"w": 417,
+						"h": 337
+					},
+					"frame": {
+						"x": 737,
+						"y": 802,
+						"w": 417,
+						"h": 337
+					}
+				},
+				{
+					"filename": "PNG/wizard/3_RUN_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 488,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 43,
+						"y": 48,
+						"w": 417,
+						"h": 335
+					},
+					"frame": {
+						"x": 737,
+						"y": 1139,
+						"w": 417,
+						"h": 335
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/5_ATTACK_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 698,
+						"h": 483
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 28,
+						"w": 341,
+						"h": 407
+					},
+					"frame": {
+						"x": 778,
+						"y": 1474,
+						"w": 341,
+						"h": 407
+					}
+				},
+				{
+					"filename": "PNG/wizard/6_HURT_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 490,
+						"h": 387
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 28,
+						"w": 402,
+						"h": 336
+					},
+					"frame": {
+						"x": 1192,
+						"y": 787,
+						"w": 402,
+						"h": 336
+					}
+				},
+				{
+					"filename": "PNG/wizard/3_RUN_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 488,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 46,
+						"w": 391,
+						"h": 348
+					},
+					"frame": {
+						"x": 1154,
+						"y": 1123,
+						"w": 391,
+						"h": 348
+					}
+				},
+				{
+					"filename": "PNG/wizard/3_RUN_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 488,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 46,
+						"w": 391,
+						"h": 348
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1123,
+						"w": 391,
+						"h": 348
+					}
+				},
+				{
+					"filename": "PNG/wizard/6_HURT_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 490,
+						"h": 387
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 28,
+						"w": 402,
+						"h": 335
+					},
+					"frame": {
+						"x": 1154,
+						"y": 1471,
+						"w": 402,
+						"h": 335
+					}
+				},
+				{
+					"filename": "PNG/wizard/4_JUMP_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 436
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 48,
+						"w": 382,
+						"h": 360
+					},
+					"frame": {
+						"x": 1556,
+						"y": 1471,
+						"w": 382,
+						"h": 360
+					}
+				},
+				{
+					"filename": "PNG/wizard/4_JUMP_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 436
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 48,
+						"w": 382,
+						"h": 360
+					},
+					"frame": {
+						"x": 1576,
+						"y": 410,
+						"w": 382,
+						"h": 360
+					}
+				},
+				{
+					"filename": "PNG/wizard/7_DIE_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 363
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 20,
+						"w": 291,
+						"h": 336
+					},
+					"frame": {
+						"x": 1594,
+						"y": 770,
+						"w": 291,
+						"h": 336
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/7_DIE_014.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 380,
+						"h": 425
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 191,
+						"w": 261,
+						"h": 193
+					},
+					"frame": {
+						"x": 1119,
+						"y": 1806,
+						"w": 261,
+						"h": 193
+					}
+				}
+			]
+		},
+		{
+			"image": "players-2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1831,
+				"h": 1995
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "PNG/wizard_fire/3_RUN_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 471
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 24,
+						"w": 382,
+						"h": 397
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 382,
+						"h": 397
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/4_JUMP_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 396,
+						"h": 465
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 11,
+						"w": 378,
+						"h": 398
+					},
+					"frame": {
+						"x": 0,
+						"y": 397,
+						"w": 378,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/4_JUMP_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 396,
+						"h": 465
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 10,
+						"w": 378,
+						"h": 398
+					},
+					"frame": {
+						"x": 0,
+						"y": 795,
+						"w": 378,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/4_JUMP_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 396,
+						"h": 465
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 38,
+						"w": 375,
+						"h": 400
+					},
+					"frame": {
+						"x": 0,
+						"y": 1193,
+						"w": 375,
+						"h": 400
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/4_JUMP_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 396,
+						"h": 465
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 39,
+						"w": 375,
+						"h": 399
+					},
+					"frame": {
+						"x": 0,
+						"y": 1593,
+						"w": 375,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/2_WALK_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 410,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 28,
+						"y": 10,
+						"w": 369,
+						"h": 399
+					},
+					"frame": {
+						"x": 382,
+						"y": 0,
+						"w": 369,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/2_WALK_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 410,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 28,
+						"y": 10,
+						"w": 369,
+						"h": 399
+					},
+					"frame": {
+						"x": 751,
+						"y": 0,
+						"w": 369,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/2_WALK_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 409,
+						"h": 420
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 6,
+						"w": 365,
+						"h": 401
+					},
+					"frame": {
+						"x": 1120,
+						"y": 0,
+						"w": 365,
+						"h": 401
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/5_ATTACK_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 652,
+						"h": 476
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 20,
+						"w": 346,
+						"h": 401
+					},
+					"frame": {
+						"x": 1485,
+						"y": 0,
+						"w": 346,
+						"h": 401
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/5_ATTACK_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 698,
+						"h": 483
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 26,
+						"w": 363,
+						"h": 399
+					},
+					"frame": {
+						"x": 378,
+						"y": 399,
+						"w": 363,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/6_HURT_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 501,
+						"h": 447
+					},
+					"spriteSourceSize": {
+						"x": 90,
+						"y": 26,
+						"w": 362,
+						"h": 399
+					},
+					"frame": {
+						"x": 741,
+						"y": 399,
+						"w": 362,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/1_IDLE_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 404
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 6,
+						"w": 362,
+						"h": 398
+					},
+					"frame": {
+						"x": 378,
+						"y": 798,
+						"w": 362,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/7_DIE_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 373,
+						"h": 411
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 362,
+						"h": 398
+					},
+					"frame": {
+						"x": 740,
+						"y": 798,
+						"w": 362,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/1_IDLE_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 404
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 5,
+						"w": 361,
+						"h": 399
+					},
+					"frame": {
+						"x": 375,
+						"y": 1196,
+						"w": 361,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/2_WALK_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 409,
+						"h": 420
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 6,
+						"w": 358,
+						"h": 400
+					},
+					"frame": {
+						"x": 375,
+						"y": 1595,
+						"w": 358,
+						"h": 400
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/2_WALK_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 409,
+						"h": 420
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 6,
+						"w": 358,
+						"h": 400
+					},
+					"frame": {
+						"x": 733,
+						"y": 1595,
+						"w": 358,
+						"h": 400
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/1_IDLE_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 404
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 5,
+						"w": 361,
+						"h": 399
+					},
+					"frame": {
+						"x": 736,
+						"y": 1196,
+						"w": 361,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/4_JUMP_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 396,
+						"h": 465
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 68,
+						"w": 362,
+						"h": 397
+					},
+					"frame": {
+						"x": 1103,
+						"y": 401,
+						"w": 362,
+						"h": 397
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/4_JUMP_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 392,
+						"h": 472
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 67,
+						"w": 359,
+						"h": 399
+					},
+					"frame": {
+						"x": 1102,
+						"y": 798,
+						"w": 359,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/6_HURT_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 508,
+						"h": 455
+					},
+					"spriteSourceSize": {
+						"x": 90,
+						"y": 25,
+						"w": 359,
+						"h": 399
+					},
+					"frame": {
+						"x": 1465,
+						"y": 401,
+						"w": 359,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/1_IDLE_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 377,
+						"h": 410
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 6,
+						"w": 359,
+						"h": 398
+					},
+					"frame": {
+						"x": 1097,
+						"y": 1197,
+						"w": 359,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/1_IDLE_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 404
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 5,
+						"w": 358,
+						"h": 399
+					},
+					"frame": {
+						"x": 1091,
+						"y": 1595,
+						"w": 358,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/5_ATTACK_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 652,
+						"h": 476
+					},
+					"spriteSourceSize": {
+						"x": 57,
+						"y": 24,
+						"w": 359,
+						"h": 398
+					},
+					"frame": {
+						"x": 1461,
+						"y": 800,
+						"w": 359,
+						"h": 398
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/1_IDLE_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 404
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 5,
+						"w": 358,
+						"h": 399
+					},
+					"frame": {
+						"x": 1456,
+						"y": 1198,
+						"w": 358,
+						"h": 399
+					}
+				},
+				{
+					"filename": "PNG/wizard_ice/2_WALK_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 409,
+						"h": 420
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 7,
+						"w": 346,
+						"h": 398
+					},
+					"frame": {
+						"x": 1449,
+						"y": 1597,
+						"w": 346,
+						"h": 398
+					}
+				}
+			]
+		},
+		{
+			"image": "players-3.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1793,
+				"h": 1894
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "PNG/wizard/1_IDLE_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 387,
+						"h": 350
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 7,
+						"w": 369,
+						"h": 343
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 369,
+						"h": 343
+					}
+				},
+				{
+					"filename": "PNG/wizard/6_HURT_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 490,
+						"h": 387
+					},
+					"spriteSourceSize": {
+						"x": 66,
+						"y": 13,
+						"w": 369,
+						"h": 344
+					},
+					"frame": {
+						"x": 369,
+						"y": 0,
+						"w": 369,
+						"h": 344
+					}
+				},
+				{
+					"filename": "PNG/wizard/1_IDLE_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 387,
+						"h": 350
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 3,
+						"w": 366,
+						"h": 347
+					},
+					"frame": {
+						"x": 738,
+						"y": 0,
+						"w": 366,
+						"h": 347
+					}
+				},
+				{
+					"filename": "PNG/wizard/1_IDLE_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 387,
+						"h": 350
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 3,
+						"w": 366,
+						"h": 347
+					},
+					"frame": {
+						"x": 1104,
+						"y": 0,
+						"w": 366,
+						"h": 347
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/7_DIE_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 380,
+						"h": 425
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 55,
+						"w": 283,
+						"h": 360
+					},
+					"frame": {
+						"x": 1470,
+						"y": 0,
+						"w": 283,
+						"h": 360
+					}
+				},
+				{
+					"filename": "PNG/wizard/2_WALK_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 419,
+						"h": 381
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 17,
+						"w": 365,
+						"h": 349
+					},
+					"frame": {
+						"x": 0,
+						"y": 343,
+						"w": 365,
+						"h": 349
+					}
+				},
+				{
+					"filename": "PNG/wizard/2_WALK_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 419,
+						"h": 381
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 17,
+						"w": 365,
+						"h": 349
+					},
+					"frame": {
+						"x": 365,
+						"y": 344,
+						"w": 365,
+						"h": 349
+					}
+				},
+				{
+					"filename": "PNG/wizard/1_IDLE_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 387,
+						"h": 350
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 363,
+						"h": 350
+					},
+					"frame": {
+						"x": 730,
+						"y": 347,
+						"w": 363,
+						"h": 350
+					}
+				},
+				{
+					"filename": "PNG/wizard/1_IDLE_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 387,
+						"h": 350
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 363,
+						"h": 350
+					},
+					"frame": {
+						"x": 1093,
+						"y": 347,
+						"w": 363,
+						"h": 350
+					}
+				},
+				{
+					"filename": "PNG/wizard/5_ATTACK_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 685,
+						"h": 474
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 62,
+						"w": 337,
+						"h": 358
+					},
+					"frame": {
+						"x": 1456,
+						"y": 360,
+						"w": 337,
+						"h": 358
+					}
+				},
+				{
+					"filename": "PNG/wizard/2_WALK_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 419,
+						"h": 381
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 3,
+						"w": 350,
+						"h": 367
+					},
+					"frame": {
+						"x": 0,
+						"y": 692,
+						"w": 350,
+						"h": 367
+					}
+				},
+				{
+					"filename": "PNG/wizard/5_ATTACK_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 685,
+						"h": 474
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 45,
+						"w": 323,
+						"h": 372
+					},
+					"frame": {
+						"x": 350,
+						"y": 693,
+						"w": 323,
+						"h": 372
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/3_RUN_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 471
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 33,
+						"w": 330,
+						"h": 376
+					},
+					"frame": {
+						"x": 673,
+						"y": 697,
+						"w": 330,
+						"h": 376
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/4_JUMP_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 392,
+						"h": 472
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 17,
+						"w": 374,
+						"h": 382
+					},
+					"frame": {
+						"x": 1003,
+						"y": 697,
+						"w": 374,
+						"h": 382
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/4_JUMP_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 392,
+						"h": 472
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 42,
+						"w": 372,
+						"h": 386
+					},
+					"frame": {
+						"x": 1377,
+						"y": 718,
+						"w": 372,
+						"h": 386
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/5_ATTACK_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 652,
+						"h": 476
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 40,
+						"w": 336,
+						"h": 386
+					},
+					"frame": {
+						"x": 0,
+						"y": 1059,
+						"w": 336,
+						"h": 386
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/4_JUMP_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 392,
+						"h": 472
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 42,
+						"w": 372,
+						"h": 386
+					},
+					"frame": {
+						"x": 336,
+						"y": 1073,
+						"w": 372,
+						"h": 386
+					}
+				},
+				{
+					"filename": "PNG/wizard/3_RUN_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 488,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 11,
+						"w": 342,
+						"h": 390
+					},
+					"frame": {
+						"x": 708,
+						"y": 1079,
+						"w": 342,
+						"h": 390
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/1_IDLE_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 377,
+						"h": 410
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 8,
+						"w": 352,
+						"h": 393
+					},
+					"frame": {
+						"x": 1050,
+						"y": 1104,
+						"w": 352,
+						"h": 393
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/1_IDLE_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 377,
+						"h": 410
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 8,
+						"w": 352,
+						"h": 393
+					},
+					"frame": {
+						"x": 1402,
+						"y": 1104,
+						"w": 352,
+						"h": 393
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/1_IDLE_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 377,
+						"h": 410
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 7,
+						"w": 356,
+						"h": 396
+					},
+					"frame": {
+						"x": 0,
+						"y": 1459,
+						"w": 356,
+						"h": 396
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/1_IDLE_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 377,
+						"h": 410
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 7,
+						"w": 356,
+						"h": 396
+					},
+					"frame": {
+						"x": 356,
+						"y": 1469,
+						"w": 356,
+						"h": 396
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/7_DIE_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 380,
+						"h": 425
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 359,
+						"h": 397
+					},
+					"frame": {
+						"x": 712,
+						"y": 1497,
+						"w": 359,
+						"h": 397
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/2_WALK_001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 410,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 8,
+						"w": 355,
+						"h": 397
+					},
+					"frame": {
+						"x": 1071,
+						"y": 1497,
+						"w": 355,
+						"h": 397
+					}
+				},
+				{
+					"filename": "PNG/wizard_fire/2_WALK_004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 410,
+						"h": 431
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 8,
+						"w": 355,
+						"h": 397
+					},
+					"frame": {
+						"x": 1426,
+						"y": 1497,
+						"w": 355,
+						"h": 397
+					}
+				}
+			]
+		},
+		{
+			"image": "players-4.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 749,
+				"h": 675
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "PNG/wizard/7_DIE_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 381,
+						"h": 363
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 4,
+						"w": 369,
+						"h": 343
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 369,
+						"h": 343
+					}
+				},
+				{
+					"filename": "PNG/wizard/2_WALK_002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 419,
+						"h": 381
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 31,
+						"w": 380,
+						"h": 332
+					},
+					"frame": {
+						"x": 0,
+						"y": 343,
+						"w": 380,
+						"h": 332
+					}
+				},
+				{
+					"filename": "PNG/wizard/2_WALK_003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 419,
+						"h": 381
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 31,
+						"w": 380,
+						"h": 332
+					},
+					"frame": {
+						"x": 369,
+						"y": 0,
+						"w": 380,
+						"h": 332
+					}
+				},
+				{
+					"filename": "PNG/wizard/4_JUMP_000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 436
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 94,
+						"w": 369,
+						"h": 342
+					},
+					"frame": {
+						"x": 380,
+						"y": 332,
+						"w": 369,
+						"h": 342
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e26e0ae314a310a0ed5042652e323b9e:2fa4ce7a66bcefec78c9034b3d12423f:649c38edf01200dee87b601e93339a8c$"
+	}
+}

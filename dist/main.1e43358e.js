@@ -137,6 +137,10 @@ var CST = {
     POTION: "potion.png",
     BACKGROUND: "forestday.png"
   },
+  GAME: {
+    PLAYER_HEALTH: 100,
+    PLAYER_DMG: 10
+  },
   AUDIO: {
     TITLE: "shuinvy-childhood.mp3"
   }
@@ -250,11 +254,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.PlayScene = void 0;
 
-var _CST = require("../CST");
+var _CST = require("../CST.js");
 
-var _CharacterSprite = require("../CharacterSprite");
+var _CharacterSprite = require("../CharacterSprite.js");
 
-var _Sprite = require("../Sprite");
+var _Sprite = require("../Sprite.js");
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -275,6 +279,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var Player1;
+var healthBar;
+var Player2;
+var healthBar2;
+
+function damagePlayer(player) {
+  player.health -= 10;
+}
 
 var PlayScene = /*#__PURE__*/function (_Phaser$Scene) {
   _inherits(PlayScene, _Phaser$Scene);
@@ -299,11 +310,14 @@ var PlayScene = /*#__PURE__*/function (_Phaser$Scene) {
       this.load.image("wiz1", "./assets.firewiz.png");
       this.load.image("wiz2", "./assets.iceopponent.png");
       this.load.image("terrain", "./assets/forestday.png");
-      this.load.multiatlas('players', "./assets/players.json", "players");
       this.load.image("earth", "./assets/earth_card.png");
       this.load.image("air", "./assets/air_card.png");
       this.load.image("fire", "./assets/fire_card.png");
       this.load.image("water", "./assets/water_card.png");
+      this.load.image('block', './assets/tiny2.png');
+      this.load.image('green-bar', './assets/healthbar-green.png');
+      this.load.image('red-bar', './assets/healthbar-red.png');
+      this.load.image("text", "./assets/Choose-Your-Attack.png");
       this.load.once("loaderror", function (file) {
         console.log(file);
       });
@@ -312,44 +326,172 @@ var PlayScene = /*#__PURE__*/function (_Phaser$Scene) {
   }, {
     key: "create",
     value: function create() {
-      //this.add.image(this.game.renderer.width / 5, this.game.renderer.height / 4, "wiz2").setDepth(1);
-      //this.add.image(this.game.renderer.width / 4, this.game.renderer.height / 4, "wiz1").setDepth(1);
       this.add.image(0, 0, "terrain").setOrigin(0).setDepth(0);
+      this.add.image(500, 740, "text").setDepth(1);
       var Player1 = this.add.sprite(225, 300, "wiz1").setDepth(1);
       Player1.setScale(0.75);
+      Player1.health = 100;
+      Player1.maxHealth = 100;
       var Player2 = this.add.sprite(750, 290, "wiz2").setDepth(1);
-      Player2.setScale(0.75); //this.wiz2 = this.add.sprite(750, 290, "wiz2")
-      //this.wiz2.setScale(0.75);
-      //this.wiz2.anchor.setTo(0.5);
-      //this.wiz2.scale.setTo(-1, 1);
-      //Load cards
+      Player2.setScale(0.75);
+      Player2.health = 100;
+      Player2.maxHealth = 100; //Load cards
 
-      var Earth = this.add.sprite(90, 625, "earth").setDepth(1);
+      var Earth = this.add.sprite(90, 575, "earth").setDepth(1);
       Earth.setScale(0.70);
-      var Air = this.add.sprite(300, 625, "air").setDepth(1);
+      var Air = this.add.sprite(300, 575, "air").setDepth(1);
       Air.setScale(0.70);
-      var Fire = this.add.sprite(510, 625, "fire").setDepth(1);
+      var Fire = this.add.sprite(510, 575, "fire").setDepth(1);
       Fire.setScale(0.70);
-      var Water = this.add.sprite(720, 625, "water").setDepth(1);
+      var Water = this.add.sprite(720, 575, "water").setDepth(1);
       Water.setScale(0.70);
-      var Earth2 = this.add.sprite(910, 625, "earth").setDepth(1);
-      Earth2.setScale(0.70); // sprite
+      var Earth2 = this.add.sprite(910, 575, "earth").setDepth(1);
+      Earth2.setScale(0.70); //Checkerboard transition
 
-      /*        capguy = this.add.sprite(0, 400, 'Wizard1', "PNG/wizard/5_ATTACK_004.png");
-              capguy.setScale(0.5, 0.5);
-               // animation
-              var frameNames = this.anims.generateFrameNames('Wizard1', { start: 1, end: 8, zeroPad: 4, prefix: 'PNG/wizard/', suffix: '.png' });
-              this.anims.create({ key: 'attack', frames: frameNames, frameRate: 10, repeat: -1 });
-              Player1.anims.play('attack');
+      var blocks = this.add.group({
+        key: 'block',
+        repeat: 300
+      }).setDepth(1);
+      Phaser.Actions.GridAlign(blocks.getChildren(), {
+        width: 21,
+        cellWidth: 60,
+        cellHeight: 60,
+        x: 0,
+        y: 0
+      });
+
+      var _this = this;
+
+      var i = 0;
+      blocks.children.iterate(function (child) {
+        _this.tweens.add({
+          targets: child,
+          scaleX: 0,
+          scaleY: 0,
+          alpha: 0,
+          y: '+=64',
+          angle: 180,
+          ease: 'Power3',
+          duration: 1000,
+          delay: 1000 + i * 100
+        });
+
+        i++; //  Change the value 32 for different results
+
+        if (i % 16 === 0) {
+          i = 0;
+        }
+      }); // Create health bar
+
+      var backgroundBar = this.add.image(110, 20, 'red-bar');
+      backgroundBar.fixedToCamera = true;
+      healthBar = this.add.sprite(110, 20, 'green-bar');
+      healthBar.fixedToCamera = true; // add text label to left of bar
+
+      var healthLabel = this.add.text(215, 20, 'Player 1', {
+        fontSize: '20px',
+        fill: '#ffffff'
+      });
+      this.add.text(250, 40, Player1.health, {
+        fontSize: '20px',
+        fill: '#ffffff'
+      });
+      healthLabel.fixedToCamera = true; // Scale the health to account for damage
+      //healthBar.scale.setTo(Player1.health / Player1.maxHealth, 1);
+      // Create opponenet health bar
+
+      var backgroundBar2 = this.add.image(890, 20, 'red-bar');
+      backgroundBar2.fixedToCamera = true;
+      healthBar2 = this.add.sprite(890, 20, 'green-bar');
+      healthBar2.fixedToCamera = true; // add text label to left of bar
+
+      var healthLabel2 = this.add.text(690, 20, 'Player 2', {
+        fontSize: '20px',
+        fill: '#ffffff'
+      });
+      healthLabel2.fixedToCamera = true; // Scale the health to account for damage
+      //healthBar2.scale.setTo(Player2.health / Player2.maxHealth, 1);
+
+      /*
+      Create the tint effect over each of the cards in a players hand.
+      Also set cards to be interactive to be able to select them.
       */
+
+      Earth.setInteractive();
+      Air.setInteractive();
+      Fire.setInteractive();
+      Water.setInteractive();
+      Earth2.setInteractive();
+      Earth.on("pointerover", function () {
+        Earth.setTint(0xff0000); // Turns red when mouse hovers over
+      });
+      Earth.on("pointerout", function () {
+        Earth.clearTint(); // Changes text back to normal tint
+      }); // Once card is clicked, deal damage
+
+      Earth.on("pointerup", function () {
+        damagePlayer(Player2);
+        healthBar2.scaleX = Player2.health / Player2.maxHealth;
+      });
+      Air.on("pointerover", function () {
+        Air.setTint(0xff0000); // Turns red when mouse hovers over
+      });
+      Air.on("pointerout", function () {
+        Air.clearTint(); // Changes text back to normal tint
+      }); // Once card is clicked, deal damage
+
+      Air.on("pointerup", function () {
+        damagePlayer(Player2);
+        healthBar2.scaleX = Player2.health / Player2.maxHealth;
+      });
+      Fire.on("pointerover", function () {
+        Fire.setTint(0xff0000); // Turns red when mouse hovers over
+      });
+      Fire.on("pointerout", function () {
+        Fire.clearTint(); // Changes text back to normal tint
+      }); // Once card is clicked, deal damage
+
+      Fire.on("pointerup", function () {
+        damagePlayer(Player2);
+        healthBar2.scaleX = Player2.health / Player2.maxHealth;
+      });
+      Water.on("pointerover", function () {
+        Water.setTint(0xff0000); // Turns red when mouse hovers over
+      });
+      Water.on("pointerout", function () {
+        Water.clearTint(); // Changes text back to normal tint
+      }); // Once card is clicked, deal damage
+
+      Water.on("pointerup", function () {
+        damagePlayer(Player2);
+        healthBar2.scaleX = Player2.health / Player2.maxHealth;
+      });
+      Earth2.on("pointerover", function () {
+        Earth2.setTint(0xff0000); // Turns red when mouse hovers over
+      });
+      Earth2.on("pointerout", function () {
+        Earth2.clearTint(); // Changes text back to normal tint
+      }); // Once card is clicked, deal damage
+
+      Earth2.on("pointerup", function () {
+        damagePlayer(Player2);
+        healthBar2.scaleX = Player2.health / Player2.maxHealth;
+      });
     }
+  }, {
+    key: "update",
+    value: function update() {} // healthBar.scale.setTo(Player1.health / player.maxHealth, 1);
+    //function damage(Player2.health) {
+    //   return (Player2.health - 10);
+    // }
+
   }]);
 
   return PlayScene;
 }(Phaser.Scene);
 
 exports.PlayScene = PlayScene;
-},{"../CST":"src/CST.js","../CharacterSprite":"src/CharacterSprite.js","../Sprite":"src/Sprite.js"}],"src/scenes/MenuScene.js":[function(require,module,exports) {
+},{"../CST.js":"src/CST.js","../CharacterSprite.js":"src/CharacterSprite.js","../Sprite.js":"src/Sprite.js"}],"src/scenes/MenuScene.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -404,15 +546,11 @@ var MenuScene = /*#__PURE__*/function (_Phaser$Scene) {
       //Creating the menu screen, create images
       this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "logo").setDepth(1);
       this.add.image(0, 0, "title_bg").setOrigin(0).setDepth(0);
-      var playButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 100, "play_button").setDepth(1); //this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 100, "options_button").setDepth(1);
-      //create sprites (if using pixel art, remove sharpen)
+      var playButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 100, "play_button").setDepth(1); //create sprites (if using pixel art, remove sharpen)
 
       var hovering = this.add.image(50, 50, "potion").setDepth(1);
-      hovering.setScale(1 / 20);
-      hovering.setVisible(false); //create audio, disable pauseonblur
-      //      this.sound.pauseOnBlur = false;
-      //        this.sound.play(CST.AUDIO.TITLE, { loop: true })
-
+      hovering.setScale(1 / 15);
+      hovering.setVisible(false);
       /* 
           PointerEvents:
               pointerover - hovering
@@ -426,10 +564,13 @@ var MenuScene = /*#__PURE__*/function (_Phaser$Scene) {
         hovering.setVisible(true);
         hovering.x = playButton.x - playButton.width;
         hovering.y = playButton.y;
+        playButton.setTint(0xff0000); // Turns red when mouse hovers over
       });
       playButton.on("pointerout", function () {
         hovering.setVisible(false);
-      });
+        playButton.clearTint(); // Changes text back to white
+      }); // Once 'play' is clicked, begin PlayScene
+
       playButton.on("pointerup", function () {
         _this.scene.start(_CST.CST.SCENES.PLAY, "hi from MenuScreen");
       });
@@ -492,17 +633,15 @@ var LoadScene = /*#__PURE__*/function (_Phaser$Scene) {
       // Load images, spritesheet, and sound
       this.load.image("terrain", "./assets/image/forestday.png");
       this.load.image("title_bg", "./assets/forestnight.png");
-      this.load.image("options_button", "./assets/options_button.png");
       this.load.image("play_button", "./assets/play_button.png");
       this.load.image("logo", "./assets/text_logo.png");
-      this.load.image("potion", "./assets/potion.png");
-      this.load.audio("title_music", "./assets/shuinvy-childhood.mp3");
+      this.load.image("potion", "./assets/potionred04.png");
       this.load.image("wiz1", "./assets/firewiz.png");
-      this.load.image("wiz2", "./assets/iceopponent.png");
-      this.load.image("earth", "./assets/earth_card.png");
-      this.load.image("air", "./assets/air_card.png");
-      this.load.image("fire", "./assets/fire_card.png");
-      this.load.image("water", "./assets/water_card.png"); // Create Loading Bar
+      this.load.image("wiz2", "./assets/iceopponent.png"); //   this.load.image("earth", "./assets/earth_card.png")
+      //   this.load.image("air", "./assets/air_card.png")
+      //   this.load.image("fire", "./assets/fire_card.png")
+      //   this.load.image("water", "./assets/water_card.png")
+      // Create Loading Bar
 
       var loadingBar = this.add.graphics({
         fillStyle: {
@@ -547,7 +686,7 @@ var _PlayScene = require("./scenes/PlayScene");
 /** @type {import("../typings/phaser")} */
 var game = new Phaser.Game({
   width: 1000,
-  height: 800,
+  height: 700,
   scene: [_LoadScene.LoadScene, _MenuScene.MenuScene, _PlayScene.PlayScene],
   render: {
     pixelArt: true
@@ -563,7 +702,7 @@ var game = new Phaser.Game({
     autoCenter: Phaser.Scale.CENTER_BOTH
   }
 });
-},{"./scenes/LoadScene":"src/scenes/LoadScene.js","./scenes/MenuScene":"src/scenes/MenuScene.js","./scenes/PlayScene":"src/scenes/PlayScene.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./scenes/LoadScene":"src/scenes/LoadScene.js","./scenes/MenuScene":"src/scenes/MenuScene.js","./scenes/PlayScene":"src/scenes/PlayScene.js"}],"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -591,7 +730,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60544" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55550" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -767,5 +906,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/main.js"], null)
+},{}]},{},["../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/main.js"], null)
 //# sourceMappingURL=/main.1e43358e.js.map
