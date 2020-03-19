@@ -32,7 +32,14 @@ export class PlayScene extends Phaser.Scene {
         this.load.image('block', './assets/tiny2.png');
         this.load.image('green-bar', './assets/healthbar-green.png');
         this.load.image('red-bar', './assets/healthbar-red.png');
+<<<<<<< Updated upstream
         this.load.image("text", "./assets/Choose-Your-Attack.png")
+=======
+        this.load.image("text", "./assets/Choose-Your-Attack.png");
+        this.load.image("dead0", "./assets/dead0.png");
+        this.load.image("dead1", "./assets/dead1.png");
+        this.load.image("dead2", "./assets/dead2.png")
+>>>>>>> Stashed changes
 
         this.load.once("loaderror", function(file) {
             console.log(file)
@@ -210,6 +217,22 @@ export class PlayScene extends Phaser.Scene {
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
         })
 
+<<<<<<< Updated upstream
+=======
+        Earth2.on('pointerup', () => {
+            if (Player2.health <= 0) {
+                Player2.destroy();
+                let Dead = this.add.sprite(750, 290, "dead0").setDepth(1);
+                Dead.setScale(0.75);
+                let Dead1 = this.add.sprite(750, 290, "dead1").setDepth(1);
+                Dead1.setScale(0.75);
+                let Dead2 = this.add.sprite(750, 290, "dead2").setDepth(1);
+                Dead2.setScale(0.75);
+
+            }
+        });
+
+>>>>>>> Stashed changes
     }
     update() {
         // healthBar.scale.setTo(Player1.health / player.maxHealth, 1);
