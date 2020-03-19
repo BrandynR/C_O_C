@@ -6,10 +6,16 @@ var Player1;
 var healthBar;
 var Player2;
 var healthBar2;
+var player2Kill = 0;
 
 function damagePlayer(player) {
-    player.health -= 10;
+    player.health -= 20;
 }
+
+function destroySprite(player) {
+    player.destroy();
+}
+
 export class PlayScene extends Phaser.Scene {
 
     constructor() {
@@ -32,7 +38,8 @@ export class PlayScene extends Phaser.Scene {
         this.load.image('block', './assets/tiny2.png');
         this.load.image('green-bar', './assets/healthbar-green.png');
         this.load.image('red-bar', './assets/healthbar-red.png');
-        this.load.image("text", "./assets/Choose-Your-Attack.png")
+        this.load.image("text", "./assets/Choose-Your-Attack.png");
+        this.load.image('dead_wiz', "./assets/7_DIE_11.png")
 
         this.load.once("loaderror", function(file) {
             console.log(file)
@@ -52,6 +59,7 @@ export class PlayScene extends Phaser.Scene {
         Player2.setScale(0.75);
         Player2.health = 100;
         Player2.maxHealth = 100;
+        //Player2.events.onKilled.add(destroySprite, this);
 
         //Load cards
         let Earth = this.add.sprite(90, 575, "earth").setDepth(1);
@@ -205,11 +213,28 @@ export class PlayScene extends Phaser.Scene {
         })
 
         // Once card is clicked, deal damage
-        Earth2.on("pointerup", () => {
-            damagePlayer(Player2);
+        Earth2.on("pointerdown", () => {
+            if (Player2.health > 0) {
+                damagePlayer(Player2);
+                healthBar2.scaleX = (Player2.health / Player2.maxHealth);
+                healthStatus2.setText(`${Player2.health}`);
+            };
+
+
+            /*damagePlayer(Player2);
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
             healthStatus2.setText(`${Player2.health}`);
+            */
         })
+
+        Earth2.on('pointerup', () => {
+            if (Player2.health <= 0) {
+                Player2.destroy();
+                let Dead = this.add.sprite(750, 290, "dead_wiz").setDepth(1);
+                Dead.setScale(0.75);
+                //this.add.sprite(750, 290, "dead_wiz").setDepth(1);
+            }
+        });
 
     }
     update() {}
