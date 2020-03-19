@@ -1,21 +1,15 @@
-import { CST } from "../CST";
-import { CharacterSprite } from "../CharacterSprite";
-import { Sprite } from "../Sprite";
+import { CST } from "../CST.js";
+import { CharacterSprite } from "../CharacterSprite.js";
+import { Sprite } from "../Sprite.js";
 
 var Player1;
 var healthBar;
 var Player2;
 var healthBar2;
-var player2Kill = 0;
 
 function damagePlayer(player) {
-    player.health -= 20;
+    player.health -= 10;
 }
-
-function destroySprite(player) {
-    player.destroy();
-}
-
 export class PlayScene extends Phaser.Scene {
 
     constructor() {
@@ -38,8 +32,7 @@ export class PlayScene extends Phaser.Scene {
         this.load.image('block', './assets/tiny2.png');
         this.load.image('green-bar', './assets/healthbar-green.png');
         this.load.image('red-bar', './assets/healthbar-red.png');
-        this.load.image("text", "./assets/Choose-Your-Attack.png");
-        this.load.image('dead_wiz', "./assets/7_DIE_11.png")
+        this.load.image("text", "./assets/Choose-Your-Attack.png")
 
         this.load.once("loaderror", function(file) {
             console.log(file)
@@ -59,7 +52,6 @@ export class PlayScene extends Phaser.Scene {
         Player2.setScale(0.75);
         Player2.health = 100;
         Player2.maxHealth = 100;
-        //Player2.events.onKilled.add(destroySprite, this);
 
         //Load cards
         let Earth = this.add.sprite(90, 575, "earth").setDepth(1);
@@ -119,8 +111,10 @@ export class PlayScene extends Phaser.Scene {
 
         // add text label to left of bar
         var healthLabel = this.add.text(215, 20, 'Player 1', { fontSize: '20px', fill: '#ffffff' });
-        var healthStatus = this.add.text(15, 40, Player1.health, { fontSize: '20px', fill: '#ffffff' });
+        this.add.text(250, 40, Player1.health, { fontSize: '20px', fill: '#ffffff' });
         healthLabel.fixedToCamera = true;
+        // Scale the health to account for damage
+        //healthBar.scale.setTo(Player1.health / Player1.maxHealth, 1);
 
         // Create opponenet health bar
         var backgroundBar2 = this.add.image(890, 20, 'red-bar');
@@ -131,8 +125,10 @@ export class PlayScene extends Phaser.Scene {
 
         // add text label to left of bar
         var healthLabel2 = this.add.text(690, 20, 'Player 2', { fontSize: '20px', fill: '#ffffff' });
-        var healthStatus2 = this.add.text(945, 40, Player2.health, { fontSize: '20px', fill: '#ffffff' });
         healthLabel2.fixedToCamera = true;
+        // Scale the health to account for damage
+        //healthBar2.scale.setTo(Player2.health / Player2.maxHealth, 1);
+
 
         /*
         Create the tint effect over each of the cards in a players hand.
@@ -156,7 +152,6 @@ export class PlayScene extends Phaser.Scene {
         Earth.on("pointerup", () => {
             damagePlayer(Player2);
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-            healthStatus2.setText(`${Player2.health}`);
         })
 
         Air.on("pointerover", () => {
@@ -171,7 +166,6 @@ export class PlayScene extends Phaser.Scene {
         Air.on("pointerup", () => {
             damagePlayer(Player2);
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-            healthStatus2.setText(`${Player2.health}`);
         })
 
         Fire.on("pointerover", () => {
@@ -186,7 +180,6 @@ export class PlayScene extends Phaser.Scene {
         Fire.on("pointerup", () => {
             damagePlayer(Player2);
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-            healthStatus2.setText(`${Player2.health}`);
         })
 
         Water.on("pointerover", () => {
@@ -201,7 +194,6 @@ export class PlayScene extends Phaser.Scene {
         Water.on("pointerup", () => {
             damagePlayer(Player2);
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-            healthStatus2.setText(`${Player2.health}`);
         })
 
         Earth2.on("pointerover", () => {
@@ -213,29 +205,17 @@ export class PlayScene extends Phaser.Scene {
         })
 
         // Once card is clicked, deal damage
-        Earth2.on("pointerdown", () => {
-            if (Player2.health > 0) {
-                damagePlayer(Player2);
-                healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-                healthStatus2.setText(`${Player2.health}`);
-            };
-
-
-            /*damagePlayer(Player2);
+        Earth2.on("pointerup", () => {
+            damagePlayer(Player2);
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-            healthStatus2.setText(`${Player2.health}`);
-            */
         })
 
-        Earth2.on('pointerup', () => {
-            if (Player2.health <= 0) {
-                Player2.destroy();
-                let Dead = this.add.sprite(750, 290, "dead_wiz").setDepth(1);
-                Dead.setScale(0.75);
-                //this.add.sprite(750, 290, "dead_wiz").setDepth(1);
-            }
-        });
-
     }
-    update() {}
+    update() {
+        // healthBar.scale.setTo(Player1.health / player.maxHealth, 1);
+    }
+
+    //function damage(Player2.health) {
+    //   return (Player2.health - 10);
+    // }
 }
