@@ -5,6 +5,7 @@ import { Sprite } from "../Sprite";
 var Player1;
 var healthBar;
 var Player2;
+var healthBar2;
 export class PlayScene extends Phaser.Scene {
 
     constructor() {
@@ -25,8 +26,8 @@ export class PlayScene extends Phaser.Scene {
         this.load.image("fire", "./assets/fire_card.png")
         this.load.image("water", "./assets/water_card.png")
         this.load.image('block', './assets/tiny2.png');
-        this.load.image('green-bar', './assets/images/health-green.png');
-        this.load.image('red-bar', './assets/images/health-red.png');
+        this.load.image('green-bar', './assets/healthbar-green.png');
+        this.load.image('red-bar', './assets/healthbar-red.png');
         this.load.image("text", "./assets/Choose-Your-Attack.png")
 
         this.load.once("loaderror", function(file) {
@@ -95,12 +96,118 @@ export class PlayScene extends Phaser.Scene {
             if (i % 16 === 0) {
                 i = 0;
             }
-
         });
+
+        // Create health bar
+        var backgroundBar = this.add.image(110, 20, 'red-bar');
+        backgroundBar.fixedToCamera = true;
+
+        healthBar = this.add.image(110, 20, 'green-bar');
+        healthBar.fixedToCamera = true;
+
+        // add text label to left of bar
+        var healthLabel = this.add.text(215, 20, 'Player 1', { fontSize: '20px', fill: '#ffffff' });
+        healthLabel.fixedToCamera = true;
+
+        // healthBar.scale.setTo(player.health / player.maxHealth, 1);
+
+        // Create opponenet health bar
+        var backgroundBar2 = this.add.image(890, 20, 'red-bar');
+        backgroundBar2.fixedToCamera = true;
+
+        healthBar2 = this.add.image(890, 20, 'green-bar');
+        healthBar2.fixedToCamera = true;
+
+        // add text label to left of bar
+        var healthLabel2 = this.add.text(690, 20, 'Player 2', { fontSize: '20px', fill: '#ffffff' });
+        healthLabel2.fixedToCamera = true;
+
+        // healthBar.scale.setTo(player.health / player.maxHealth, 1);
+
+
+        /*
+        Create the tint effect over each of the cards in a players hand.
+        Also set cards to be interactive to be able to select them.
+        */
+        Earth.setInteractive();
+        Air.setInteractive();
+        Fire.setInteractive();
+        Water.setInteractive();
+        Earth2.setInteractive();
+
+        Earth.on("pointerover", () => {
+            Earth.setTint(0xff0000); // Turns red when mouse hovers over
+        })
+
+        Earth.on("pointerout", () => {
+            Earth.clearTint(); // Changes text back to normal tint
+        })
+
+        // Once card is clicked, deal damage
+        Earth.on("pointerup", () => {
+            // Player1.damage(10);
+            healthBar.scale.setTo(1 / 10);
+        })
+
+        Air.on("pointerover", () => {
+            Air.setTint(0xff0000); // Turns red when mouse hovers over
+        })
+
+        Air.on("pointerout", () => {
+            Air.clearTint(); // Changes text back to normal tint
+        })
+
+        // Once card is clicked, deal damage
+        Air.on("pointerup", () => {
+            // Player1.damage(10);
+            healthBar.scale.setTo(1 / 10);
+        })
+
+        Fire.on("pointerover", () => {
+            Fire.setTint(0xff0000); // Turns red when mouse hovers over
+        })
+
+        Fire.on("pointerout", () => {
+            Fire.clearTint(); // Changes text back to normal tint
+        })
+
+        // Once card is clicked, deal damage
+        Fire.on("pointerup", () => {
+            // Player1.damage(10);
+            healthBar.scale.setTo(1 / 10);
+        })
+
+        Water.on("pointerover", () => {
+            Water.setTint(0xff0000); // Turns red when mouse hovers over
+        })
+
+        Water.on("pointerout", () => {
+            Water.clearTint(); // Changes text back to normal tint
+        })
+
+        // Once card is clicked, deal damage
+        Water.on("pointerup", () => {
+            // Player1.damage(10);
+            healthBar.scale.setTo(1 / 10);
+        })
+
+        Earth2.on("pointerover", () => {
+            Earth2.setTint(0xff0000); // Turns red when mouse hovers over
+        })
+
+        Earth2.on("pointerout", () => {
+            Earth2.clearTint(); // Changes text back to normal tint
+        })
+
+        // Once card is clicked, deal damage
+        Earth2.on("pointerup", () => {
+            // Player1.damage(10);
+            healthBar.scale.setTo(1 / 10);
+        })
 
     }
     update() {
-
+        // healthBar.scale.setTo(Player1.health / player.maxHealth, 1);
     }
 
 }
