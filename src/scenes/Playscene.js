@@ -8,7 +8,7 @@ var Player2;
 var healthBar2;
 
 function damagePlayer(player) {
-    player.health -= 10;
+    player.health -= 20;
 }
 export class PlayScene extends Phaser.Scene {
 
@@ -112,12 +112,10 @@ export class PlayScene extends Phaser.Scene {
         healthBar = this.add.sprite(110, 20, 'green-bar');
         healthBar.fixedToCamera = true;
 
-        // add text label to left of bar
+        // add text label to right of bar
         var healthLabel = this.add.text(215, 20, 'Player 1', { fontSize: '20px', fill: '#ffffff' });
-        this.add.text(250, 40, Player1.health, { fontSize: '20px', fill: '#ffffff' });
+        this.add.text(85, 40, Player1.health, { fontSize: '20px', fill: '#ffffff' });
         healthLabel.fixedToCamera = true;
-        // Scale the health to account for damage
-        //healthBar.scale.setTo(Player1.health / Player1.maxHealth, 1);
 
         // Create opponenet health bar
         var backgroundBar2 = this.add.image(890, 20, 'red-bar');
@@ -128,10 +126,8 @@ export class PlayScene extends Phaser.Scene {
 
         // add text label to left of bar
         var healthLabel2 = this.add.text(690, 20, 'Player 2', { fontSize: '20px', fill: '#ffffff' });
+        this.add.text(870, 40, Player2.health, { fontSize: '20px', fill: '#ffffff' });
         healthLabel2.fixedToCamera = true;
-        // Scale the health to account for damage
-        //healthBar2.scale.setTo(Player2.health / Player2.maxHealth, 1);
-
 
         /*
         Create the tint effect over each of the cards in a players hand.
@@ -208,9 +204,10 @@ export class PlayScene extends Phaser.Scene {
         })
 
         // Once card is clicked, deal damage
-        Earth2.on("pointerup", () => {
+        Earth2.on("pointerdown", () => {
             damagePlayer(Player2);
             healthBar2.scaleX = (Player2.health / Player2.maxHealth);
+            healthLabel2.text(`${Player2.health}`);
         })
 
         Earth2.on('pointerup', () => {
