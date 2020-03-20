@@ -278,7 +278,7 @@ export class PlayScene extends Phaser.Scene {
                     Player2.setVisible(false);
                     oppAttack.setVisible(true);
                     Player1.destroy();
-                    let Dead2 = this.add.sprite(190, 300, "dead_ply1").setDepth(1);
+                    let Dead2 = this.add.sprite(180, 300, "dead_ply1").setDepth(1);
                     Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -311,7 +311,7 @@ export class PlayScene extends Phaser.Scene {
                     Player2.setVisible(false);
                     oppAttack.setVisible(true);
                     Player1.destroy();
-                    let Dead2 = this.add.sprite(190, 300, "dead_ply1").setDepth(1);
+                    let Dead2 = this.add.sprite(180, 300, "dead_ply1").setDepth(1);
                     Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
 

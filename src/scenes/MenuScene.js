@@ -15,6 +15,7 @@ export class MenuScene extends Phaser.Scene {
         //Creating the menu screen, create images
         this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "logo").setDepth(1);
         this.add.image(0, 0, "title_bg").setOrigin(0).setDepth(0);
+        this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 300, "creators").setDepth(1);
         let playButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2 + 100, "play_button").setDepth(1);
 
         //create sprites (if using pixel art, remove sharpen)
