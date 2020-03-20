@@ -36,8 +36,10 @@ export class PlayScene extends Phaser.Scene {
             this.load.image("dead0", "./assets/dead0.png");
             this.load.image("dead1", "./assets/dead1.png");
             this.load.image("dead2", "./assets/dead2.png");
+            this.load.image("dead_ply1", "./assets/dead_ply1.png")
             this.load.image("win", "./assets/Winner.png");
-            this.load.image("attack", "./assets/attack.png")
+            this.load.image("attack", "./assets/attack.png");
+            this.load.image("oppAttack", "./assets/oppAttack.png")
 
             this.load.once("loaderror", function(file) {
                 console.log(file)
@@ -73,6 +75,10 @@ export class PlayScene extends Phaser.Scene {
             let Attack = this.add.sprite(225, 300, "attack").setDepth(1);
             Attack.setScale(0.75);
             Attack.setVisible(false);
+
+            let oppAttack = this.add.sprite(750, 290, "oppAttack").setDepth(1);
+            //oppAttack.setScale(0.75)
+            oppAttack.setVisible(false);
 
             //Checkerboard transition
             var blocks = this.add.group({ key: 'block', repeat: 300 }).setDepth(1);
@@ -120,7 +126,7 @@ export class PlayScene extends Phaser.Scene {
 
             // add text label to right of bar
             var healthLabel = this.add.text(215, 20, 'Player 1', { fontSize: '20px', fill: '#ffffff' });
-            var healthStatus = this.add.text(85, 40, Player1.health, { fontSize: '20px', fill: '#ffffff' });
+            var healthStatus = this.add.text(15, 40, Player1.health, { fontSize: '20px', fill: '#ffffff' });
             healthLabel.fixedToCamera = true;
 
             // Create opponenet health bar
@@ -132,7 +138,7 @@ export class PlayScene extends Phaser.Scene {
 
             // add text label to left of bar
             var healthLabel2 = this.add.text(690, 20, 'Player 2', { fontSize: '20px', fill: '#ffffff' });
-            var healthStatus2 = this.add.text(870, 40, Player2.health, { fontSize: '20px', fill: '#ffffff' });
+            var healthStatus2 = this.add.text(950, 40, Player2.health, { fontSize: '20px', fill: '#ffffff' });
             healthLabel2.fixedToCamera = true;
 
             /*
@@ -155,7 +161,9 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Earth.on("pointerdown", () => {
+                Player1.setVisible(false);
                 Attack.setVisible(true);
+                Attack.setScale(0.8);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -164,10 +172,11 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Earth.on('pointerup', () => {
+                Player1.setVisible(true);
                 Attack.setVisible(false);
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead2").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -183,7 +192,9 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Air.on("pointerdown", () => {
+                Player1.setVisible(false);
                 Attack.setVisible(true);
+                Attack.setScale(0.8);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -192,10 +203,11 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Air.on('pointerup', () => {
+                Player1.setVisible(true);
                 Attack.setVisible(false);
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead2").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -211,7 +223,9 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Fire.on("pointerdown", () => {
+                Player1.setVisible(false);
                 Attack.setVisible(true);
+                Attack.setScale(0.8);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -220,10 +234,11 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Fire.on('pointerup', () => {
+                Player1.setVisible(true);
                 Attack.setVisible(false)
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead2").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -239,20 +254,24 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Water.on("pointerdown", () => {
-                Attack.setVisible(true);
-                if (Player2.health > 0) {
-                    damagePlayer(Player2);
-                    healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-                    healthStatus2.setText(`${Player2.health}`);
+                Player2.setVisible(false)
+                oppAttack.setVisible(true);
+                oppAttack.setScale(0.8);
+                if (Player1.health > 0) {
+                    damagePlayer(Player1);
+                    healthBar.scaleX = (Player1.health / Player1.maxHealth);
+                    healthStatus.setText(`${Player1.health}`);
                 };
             })
 
             Water.on('pointerup', () => {
-                Attack.setVisible(false);
-                if (Player2.health <= 0) {
-                    Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
-                    Dead.setScale(0.75);
+                Player2.setVisible(true)
+                oppAttack.setVisible(false);
+                oppAttack.setScale(0.8);
+                if (Player1.health <= 0) {
+                    Player1.destroy();
+                    let Dead2 = this.add.sprite(200, 300, "dead_ply1").setDepth(1);
+                    Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
             })
@@ -267,20 +286,23 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Earth2.on("pointerdown", () => {
-                Attack.setVisible(true);
-                if (Player2.health > 0) {
-                    damagePlayer(Player2);
-                    healthBar2.scaleX = (Player2.health / Player2.maxHealth);
-                    healthStatus2.setText(`${Player2.health}`);
+                Player2.setVisible(false);
+                oppAttack.setVisible(true);
+                oppAttack.setScale(.8)
+                if (Player1.health > 0) {
+                    damagePlayer(Player1);
+                    healthBar.scaleX = (Player1.health / Player1.maxHealth);
+                    healthStatus.setText(`${Player1.health}`);
                 };
             })
 
             Earth2.on('pointerup', () => {
-                Attack.setVisible(false);
-                if (Player2.health <= 0) {
-                    Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
-                    Dead.setScale(0.75);
+                Player2.setVisible(true);
+                oppAttack.setVisible(false);
+                if (Player1.health <= 0) {
+                    Player1.destroy();
+                    let Dead2 = this.add.sprite(200, 300, "dead_ply1").setDepth(1);
+                    Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
 
                     //let Dead1 = this.add.sprite(750, 290, "dead1").setDepth(1);
