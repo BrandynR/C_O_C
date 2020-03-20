@@ -1,6 +1,6 @@
-import { CST } from "../CST";
-import { CharacterSprite } from "../CharacterSprite";
-import { Sprite } from "../Sprite";
+import { CST } from "../CST.js";
+import { CharacterSprite } from "../CharacterSprite.js";
+import { Sprite } from "../Sprite.js";
 
 var Player1;
 var healthBar;
@@ -28,8 +28,8 @@ export class PlayScene extends Phaser.Scene {
         console.log("THANX");
     }
     preload() {
-        this.load.image("wiz1", "./assets.firewiz.png")
-        this.load.image("wiz2", "./assets.iceopponent.png")
+        // this.load.image("wiz1", "./assets.firewiz.png")
+        // this.load.image("wiz2", "./assets.iceopponent.png")
         this.load.image("terrain", "./assets/forestday.png");
         this.load.image("earth", "./assets/earth_card.png")
         this.load.image("air", "./assets/air_card.png")
@@ -40,8 +40,14 @@ export class PlayScene extends Phaser.Scene {
         this.load.image('red-bar', './assets/healthbar-red.png');
         this.load.image("text", "./assets/Choose-Your-Attack.png");
         this.load.image('dead_wiz', "./assets/7_DIE_11.png")
+        this.load.image("ship", "./assets/wizard1.png");
+        // this.load.image("wiz2", "./assets/wizard2.png");
+        this.load.image("otherPlayer", "./assets/wizard2.png");
+        // this.load.image('ship', 'assets/spaceShips_001.png');
+        // this.load.image('otherPlayer', 'assets/enemyBlack5.png');
 
-        this.load.once("loaderror", function(file) {
+
+        this.load.once("loaderror", function (file) {
             console.log(file)
         })
         console.log("You've made it to preload")
@@ -50,12 +56,12 @@ export class PlayScene extends Phaser.Scene {
         this.add.image(0, 0, "terrain").setOrigin(0).setDepth(0);
         this.add.image(500, 740, "text").setDepth(1);
 
-        let Player1 = this.add.sprite(225, 300, "wiz1").setDepth(1);
+        let Player1 = this.add.sprite(-25, -25, "wiz1").setDepth(1);
         Player1.setScale(0.75);
         Player1.health = 100;
         Player1.maxHealth = 100;
 
-        let Player2 = this.add.sprite(750, 290, "wiz2").setDepth(1);
+        let Player2 = this.add.sprite(-25, -25, "wiz2").setDepth(1);
         Player2.setScale(0.75);
         Player2.health = 100;
         Player2.maxHealth = 100;
@@ -88,7 +94,7 @@ export class PlayScene extends Phaser.Scene {
 
         var i = 0;
 
-        blocks.children.iterate(function(child) {
+        blocks.children.iterate(function (child) {
 
             _this.tweens.add({
                 targets: child,
@@ -236,6 +242,72 @@ export class PlayScene extends Phaser.Scene {
             }
         });
 
+        // this.scene.add(CST.SCENES.MENU, MenuScene, false)
+        // this.scene.start(CST.SCENES.MENU, "hello from LoadScene");  //JFK commented for 2 player
+        var self = this;
+        this.socket = io();
+        this.otherPlayers = this.physics.add.group();
+        this.socket.on('currentPlayers', function (players) {
+            Object.keys(players).forEach(function (id) {
+                if (players[id].playerId === self.socket.id) {
+                    addPlayer(self, players[id]);
+                } else {
+                    addOtherPlayers(self, players[id]);
+                }
+            });
+        });
+        this.socket.on('newPlayer', function (playerInfo) {
+            addOtherPlayers(self, playerInfo);
+        });
+        this.socket.on('disconnect', function (playerId) {
+            self.otherPlayers.getChildren().forEach(function (otherPlayer) {
+                if (playerId === otherPlayer.playerId) {
+                    otherPlayer.destroy();
+                }
+            });
+        });
+        this.cursors = this.input.keyboard.createCursorKeys();
     }
-    update() {}
+    update() {
+        if (this.ship) {
+            if (this.cursors.left.isDown) {
+                this.ship.setAngularVelocity(-150);
+            } else if (this.cursors.right.isDown) {
+                this.ship.setAngularVelocity(150);
+            } else {
+                this.ship.setAngularVelocity(0);
+            }
+
+            if (this.cursors.up.isDown) {
+                this.physics.velocityFromRotation(this.ship.rotation + 1.5, -100, this.ship.body.acceleration);
+            } else {
+                this.ship.setAcceleration(0);
+            }
+
+            this.physics.world.wrap(this.ship, 5);
+        }
+    }
+}
+function addPlayer(self, playerInfo) {  // hard code playerInfo.x, playerInfo.y
+    self.ship = self.physics.add.image(200, 275, 'ship').setOrigin(0.5, 0.5);  //.setDisplaySize(53, 40);
+    // if (playerInfo.team === 'blue') {
+    //     self.ship.setTint(0x0000ff);
+    // } else {
+    //     self.ship.setTint(0xff0000);
+    // }
+    self.ship.setDrag(100);
+    self.ship.setAngularDrag(100);
+    self.ship.setMaxVelocity(200);
+}
+
+function addOtherPlayers(self, playerInfo) {  // hard code playerInfo.x, playerInfo.y
+    const otherPlayer = self.add.sprite(825, 285, 'otherPlayer').setOrigin(0.5, 0.5).setDisplaySize(350, 350);
+    // if (playerInfo.team === 'blue') {
+    //     otherPlayer.setTint(0x0000ff);
+    // } else {
+    //     otherPlayer.setTint(0xff0000);
+    // }
+    otherPlayer.flipX = true;
+    otherPlayer.playerId = playerInfo.playerId;
+    self.otherPlayers.add(otherPlayer);
 }

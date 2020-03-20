@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/BrandynR/C_O_C#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
   }
 }

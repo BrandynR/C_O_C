@@ -11,13 +11,17 @@ export class LoadScene extends Phaser.Scene {
     }
     preload() {
         // Load images, spritesheet, and sound
-        this.load.image("terrain", "./assets/image/forestday.png");
+        this.load.image("terrain", "./assets/forestday.png");
         this.load.image("title_bg", "./assets/forestnight.png");
         this.load.image("play_button", "./assets/play_button.png");
         this.load.image("logo", "./assets/text_logo.png");
         this.load.image("potion", "./assets/potionred04.png");
-        this.load.image("wiz1", "./assets/firewiz.png");
-        this.load.image("wiz2", "./assets/iceopponent.png");
+        // this.load.image("wiz1", "./assets/wizard1.png");
+        // this.load.image("wiz2", "./assets/wizard2.png");
+        // this.load.image("otherPlayer", "./assets/wizard2.png");
+        // this.load.image('wiz1', 'assets/spaceShips_001.png');
+        // this.load.image('otherPlayer', 'assets/enemyBlack5.png');
+
         //   this.load.image("earth", "./assets/earth_card.png")
         //   this.load.image("air", "./assets/air_card.png")
         //   this.load.image("fire", "./assets/fire_card.png")
@@ -44,7 +48,6 @@ export class LoadScene extends Phaser.Scene {
             //      console.log("done")
         })
     }
-
     create() {
         // this.scene.add(CST.SCENES.MENU, MenuScene, false)
         this.scene.start(CST.SCENES.MENU, "hello from LoadScene");
