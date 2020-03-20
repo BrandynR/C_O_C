@@ -36,7 +36,8 @@ export class PlayScene extends Phaser.Scene {
             this.load.image("dead0", "./assets/dead0.png");
             this.load.image("dead1", "./assets/dead1.png");
             this.load.image("dead2", "./assets/dead2.png");
-            this.load.image("win", "./assets/Winner.png")
+            this.load.image("win", "./assets/Winner.png");
+            this.load.image("attack", "./assets/attack.png")
 
             this.load.once("loaderror", function(file) {
                 console.log(file)
@@ -68,6 +69,10 @@ export class PlayScene extends Phaser.Scene {
             Water.setScale(0.70);
             let Earth2 = this.add.sprite(910, 575, "earth").setDepth(1);
             Earth2.setScale(0.70);
+
+            let Attack = this.add.sprite(225, 300, "attack").setDepth(1);
+            Attack.setScale(0.75);
+            Attack.setVisible(false);
 
             //Checkerboard transition
             var blocks = this.add.group({ key: 'block', repeat: 300 }).setDepth(1);
@@ -150,6 +155,7 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Earth.on("pointerdown", () => {
+                Attack.setVisible(true);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -158,9 +164,10 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Earth.on('pointerup', () => {
+                Attack.setVisible(false);
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(800, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -176,6 +183,7 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Air.on("pointerdown", () => {
+                Attack.setVisible(true);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -184,9 +192,10 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Air.on('pointerup', () => {
+                Attack.setVisible(false);
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(800, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -202,6 +211,7 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Fire.on("pointerdown", () => {
+                Attack.setVisible(true);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -210,9 +220,10 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Fire.on('pointerup', () => {
+                Attack.setVisible(false)
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(800, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -228,6 +239,7 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Water.on("pointerdown", () => {
+                Attack.setVisible(true);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -236,9 +248,10 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Water.on('pointerup', () => {
+                Attack.setVisible(false);
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(800, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -254,6 +267,7 @@ export class PlayScene extends Phaser.Scene {
 
             // Once card is clicked, deal damage
             Earth2.on("pointerdown", () => {
+                Attack.setVisible(true);
                 if (Player2.health > 0) {
                     damagePlayer(Player2);
                     healthBar2.scaleX = (Player2.health / Player2.maxHealth);
@@ -262,9 +276,10 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Earth2.on('pointerup', () => {
+                Attack.setVisible(false);
                 if (Player2.health <= 0) {
                     Player2.destroy();
-                    let Dead = this.add.sprite(750, 290, "dead0").setDepth(1);
+                    let Dead = this.add.sprite(850, 290, "dead0").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
 
