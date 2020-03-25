@@ -87,6 +87,9 @@ John Knight
 ## Related Projects
 For other Phaser 3 projects and examples please visit:
 [phaser.io](https://phaser.io)
+
+or
+
 [http://phaser.io/examples](http://phaser.io/examples)
 
 
