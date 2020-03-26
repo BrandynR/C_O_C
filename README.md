@@ -29,7 +29,7 @@ Lastly, working together as a team became nearly impossible towards the end of o
 
 To install the application, you need to download the project from github, https://github.com/BrandynR/C_O_C.
 
-![](https://i.imgur.com/ItP83lL.png)
+![] <img src="https://i.imgur.com/ItP83lL.png" alt="clone" width=200/>
 
 You need to ensure you have nodejs installed, if you don't open your terminal and type:
 
