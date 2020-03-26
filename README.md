@@ -38,7 +38,7 @@ You should get a response similar to this:
 <code>$ node -v</code>  
 <code>v10.19.0</code>
 
-If node is not installed download and install it from [here](https://nodejs.org/en/download/)
+If node is not installed download and install it from [here](https://nodejs.org/en/download/) or see the next instruction if installing on Ubuntu.
 
 Node.js and npm are available in Ubuntu. So if you are installing node/npm on Ubunutu you can simply perform these commands:
 <code>sudo apt-get install nodejs</code>  
