@@ -4,9 +4,9 @@
 
 # Clash of Conjurers
 
-Clash of Conjurers is a 1 vs 1 card based attack game, built using the [Phaser 3](https://phaser.io/) framework in conjuction with Javascript, NodeJS, HTML5, and CSS.
+Clash of Conjurers is a 1 vs 1 card based attack game, built using the [Phaser 3](https://phaser.io/) framework in conjunction with Javascript, NodeJS, HTML5, and CSS.
 
-Created by Brandyn Reindel, John Knight and Adam Sedki as our end of Foundations portfolio project for Holberton School, it is inspired by the computer game Slay the Spire, and the mobile game Puzzles and Empires. Where two wizards chose cards with an elemantal value to attack each other.
+Created by Brandyn Reindel, John Knight and Adam Sedki as our end of Foundations portfolio project for Holberton School, it is inspired by the computer game Slay the Spire, and the mobile game Puzzles and Empires. Where two wizards chose cards with an elemental value to attack each other.
 
 When we started this project we set out to design and build a game with little to no learning curve so that users could open the game and play without needing to memorize a bunch of rules, or learn a bunch of controls. A game where players could enjoy themselves by playing a few rounds with a friend to kill some time, without worrying about having to invest an afternoon just learning how to play.
 
