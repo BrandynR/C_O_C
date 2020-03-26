@@ -36,8 +36,7 @@ You need to ensure you have nodejs and npm (node package manager) installed. If 
 
 Node.js and npm available in Ubuntu. So if you are installing node/npm on Ubunutu you can simply perform these commands:
 <code>sudo apt-get install nodejs</code>
-
-<code>sudo apt-get npm<code>
+<code>sudo apt-get npm</code>
 
 Lastly, you need a web browser to navigate to your localhost.
 
