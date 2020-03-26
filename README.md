@@ -31,11 +31,12 @@ To install the application, you need to download the project from github, https:
 
 <img src="https://i.imgur.com/ItP83lL.png" alt="clone" width="550" height="300"/>
 
-You need to ensure you have nodejs and npm (node package manager) installed, if you don't open your terminal and type:
+You need to ensure you have nodejs and npm (node package manager) installed. If you don't, open your terminal and type:
 ![]https://nodejs.org/en/download/
 
 Node.js and npm available in Ubuntu. So if you are installing node/npm on Ubunutu you can simply perform these commands:
 <code>sudo apt-get install nodejs</code>
+
 <code>sudo apt-get npm<code>
 
 Lastly, you need a web browser to navigate to your localhost.
