@@ -46,6 +46,11 @@ Node.js and npm are available in Ubuntu. So if you are installing node/npm on Ub
 
 Lastly, you need a web browser to navigate to your localhost.
 
+Once the project and node/npm are installed, change directory to the downloaded project directory and type:  
+<code>npm install</code>
+
+This creates the node_modules directory with all the node dependencies necessary to run the app. You don't have to do anything with this directory nor the modules.
+
 ---
 
 ## Usage
