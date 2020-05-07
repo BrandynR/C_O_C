@@ -29,13 +29,27 @@ Lastly, working together as a team became nearly impossible towards the end of o
 
 To install the application, you need to download the project from github, https://github.com/BrandynR/C_O_C.
 
-![](https://i.imgur.com/ItP83lL.png)
+<img src="https://i.imgur.com/ItP83lL.png" alt="clone" width="550" height="300"/>
 
-You need to ensure you have nodejs installed, if you don't open your terminal and type:
+You need to ensure you have nodejs and npm (node package manager) installed. If you're not sure, open your terminal and type:  
+<code>node -v</code>
 
-<code>npm install</code>
+You should get a response similar to this:  
+<code>$ node -v</code>  
+<code>v10.19.0</code>
+
+If node is not installed download and install it from [nodejs.org](https://nodejs.org/en/download/) or see the next instruction if installing on Ubuntu.
+
+Node.js and npm are available in Ubuntu. So if you are installing node/npm on Ubunutu you can simply perform these commands:  
+<code>sudo apt-get install nodejs</code>  
+<code>sudo apt-get install npm</code>
 
 Lastly, you need a web browser to navigate to your localhost.
+
+Once the project and node/npm are installed, change directory to the downloaded project directory and type:  
+<code>npm install</code>
+
+This creates the node_modules directory with all the node dependencies necessary to run the app. You don't have to do anything with this directory nor the modules.
 
 ---
 
