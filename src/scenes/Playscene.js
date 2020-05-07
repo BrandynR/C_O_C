@@ -8,7 +8,7 @@ var Player2;
 var healthBar2;
 
 function damagePlayer(player) {
-    player.health -= 20;
+    player.health -= Math.floor(Math.random() * 20);
 }
 export class PlayScene extends Phaser.Scene {
 
