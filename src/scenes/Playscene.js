@@ -240,7 +240,6 @@ export class PlayScene extends Phaser.Scene {
             Fire.on("pointerout", () => {
                 Fire.clearTint(); // Changes text back to normal tint
             })
-
             // Once card is clicked, deal damage
             Fire.on("pointerdown", () => {
                 Player1.setVisible(false);
