@@ -50,7 +50,7 @@ export class PlayScene extends Phaser.Scene {
         create() {
             //Background image
             this.add.image(0, 0, "terrain").setOrigin(0).setDepth(0);
-            this.add.sprite(500, 740, "text").setDepth(2);
+            this.add.image(500, 665, "text").setDepth(1);
 
             //Player1 left wizard
             let Player1 = this.add.sprite(275, 310, "wiz1").setDepth(1);
@@ -65,23 +65,23 @@ export class PlayScene extends Phaser.Scene {
             Player2.maxHealth = 100;
 
             //Load cards for Player 1's hand
-            let Earth = this.add.sprite(57, 575, "earth").setDepth(1);
+            let Earth = this.add.sprite(57, 545, "earth").setDepth(1);
             Earth.setScale(0.45);
-            let Air = this.add.sprite(167, 575, "air").setDepth(1);
+            let Air = this.add.sprite(165, 545, "air").setDepth(1);
             Air.setScale(0.45);
-            let Fire = this.add.sprite(277, 575, "fire").setDepth(1);
+            let Fire = this.add.sprite(275, 545, "fire").setDepth(1);
             Fire.setScale(0.45);
-            let Water = this.add.sprite(387, 575, "water").setDepth(1);
+            let Water = this.add.sprite(385, 545, "water").setDepth(1);
             Water.setScale(0.45);
             
             //Load cards for Players 2's hand
-            let Earth2 = this.add.sprite(610, 575, "earth").setDepth(1);
+            let Earth2 = this.add.sprite(612, 545, "earth").setDepth(1);
             Earth2.setScale(0.45);
-            let Air2 = this.add.sprite(720, 575, "air").setDepth(1);
+            let Air2 = this.add.sprite(720, 545, "air").setDepth(1);
             Air2.setScale(0.45);
-            let Fire2 = this.add.sprite(830, 575, "fire").setDepth(1);
+            let Fire2 = this.add.sprite(830, 545, "fire").setDepth(1);
             Fire2.setScale(0.45);
-            let Water2 = this.add.sprite(940, 575, "water").setDepth(1);
+            let Water2 = this.add.sprite(940, 545, "water").setDepth(1);
             Water2.setScale(0.45);
 
               //Checkerboard transition
