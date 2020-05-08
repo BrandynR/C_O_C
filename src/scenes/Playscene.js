@@ -59,7 +59,7 @@ export class PlayScene extends Phaser.Scene {
             Player1.maxHealth = 100;
 
             //Player2 right wizard
-            let Player2 = this.add.sprite(680, 290, "wiz2").setDepth(1);
+            let Player2 = this.add.sprite(670, 290, "wiz2").setDepth(1);
             Player2.setScale(0.75);
             Player2.health = 100;
             Player2.maxHealth = 100;
@@ -151,7 +151,7 @@ export class PlayScene extends Phaser.Scene {
              Attack.setVisible(false);
  
              //Attack animation for Player2
-             let oppAttack = this.add.sprite(670, 290, "oppAttack").setDepth(1);
+             let oppAttack = this.add.sprite(660, 290, "oppAttack").setDepth(1);
              //oppAttack.setScale(0.75)
              oppAttack.setVisible(false);
  
