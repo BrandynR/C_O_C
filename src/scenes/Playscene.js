@@ -23,7 +23,7 @@ export class PlayScene extends Phaser.Scene {
         }
         preload() {
            //this.load.image("ground", "./assets.ground.png")
-            this.load.image("wiz1", "./assets.firewiz.png")
+            this.load.image("wiz1", "./assets.3_RUN_000.png")
             this.load.image("wiz2", "./assets.iceopponent.png")
             this.load.image("terrain", "./assets/forestday.png");
             this.load.image("earth", "./assets/earth_card.png")
@@ -53,13 +53,13 @@ export class PlayScene extends Phaser.Scene {
             this.add.sprite(500, 740, "text").setDepth(2);
 
             //Player1 left wizard
-            let Player1 = this.add.sprite(225, 300, "wiz1").setDepth(1);
+            let Player1 = this.add.sprite(275, 300, "wiz1").setDepth(1);
             Player1.setScale(0.75);
             Player1.health = 100;
             Player1.maxHealth = 100;
 
             //Player2 right wizard
-            let Player2 = this.add.sprite(750, 290, "wiz2").setDepth(1);
+            let Player2 = this.add.sprite(690, 290, "wiz2").setDepth(1);
             Player2.setScale(0.75);
             Player2.health = 100;
             Player2.maxHealth = 100;
@@ -146,12 +146,12 @@ export class PlayScene extends Phaser.Scene {
               healthLabel2.fixedToCamera = true;
 
              //Attack animation for Player1
-             let Attack = this.add.sprite(225, 300, "attack").setDepth(1);
-             Attack.setScale(0.75);
+             let Attack = this.add.sprite(310, 300, "attack").setDepth(1);
+             //Attack.setScale(0.75);
              Attack.setVisible(false);
  
              //Attack animation for Player2
-             let oppAttack = this.add.sprite(750, 290, "oppAttack").setDepth(1);
+             let oppAttack = this.add.sprite(680, 290, "oppAttack").setDepth(1);
              //oppAttack.setScale(0.75)
              oppAttack.setVisible(false);
  
@@ -195,7 +195,7 @@ export class PlayScene extends Phaser.Scene {
                     Player1.setVisible(false);
                     Attack.setVisible(true);
                     Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead2").setDepth(1);
+                    let Dead = this.add.sprite(790, 290, "dead2").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -228,7 +228,7 @@ export class PlayScene extends Phaser.Scene {
                     Player1.setVisible(false);
                     Attack.setVisible(true);
                     Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead2").setDepth(1);
+                    let Dead = this.add.sprite(790, 290, "dead2").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -260,7 +260,7 @@ export class PlayScene extends Phaser.Scene {
                     Player1.setVisible(false);
                     Attack.setVisible(true);
                     Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead2").setDepth(1);
+                    let Dead = this.add.sprite(790, 290, "dead2").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -293,7 +293,7 @@ export class PlayScene extends Phaser.Scene {
                     Player1.setVisible(false);
                     Attack.setVisible(true);
                     Player2.destroy();
-                    let Dead = this.add.sprite(850, 290, "dead2").setDepth(1);
+                    let Dead = this.add.sprite(790, 290, "dead2").setDepth(1);
                     Dead.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -323,7 +323,7 @@ export class PlayScene extends Phaser.Scene {
                     Player2.setVisible(false);
                     oppAttack.setVisible(true);
                     Player1.destroy();
-                    let Dead2 = this.add.sprite(180, 300, "dead_ply1").setDepth(1);
+                    let Dead2 = this.add.sprite(240, 300, "dead_ply1").setDepth(1);
                     Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
 
@@ -354,7 +354,7 @@ export class PlayScene extends Phaser.Scene {
                     Player2.setVisible(false);
                     oppAttack.setVisible(true);
                     Player1.destroy();
-                    let Dead2 = this.add.sprite(180, 300, "dead_ply1").setDepth(1);
+                    let Dead2 = this.add.sprite(240, 300, "dead_ply1").setDepth(1);
                     Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -384,7 +384,7 @@ export class PlayScene extends Phaser.Scene {
                     Player2.setVisible(false);
                     oppAttack.setVisible(true);
                     Player1.destroy();
-                    let Dead2 = this.add.sprite(180, 300, "dead_ply1").setDepth(1);
+                    let Dead2 = this.add.sprite(240, 300, "dead_ply1").setDepth(1);
                     Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
@@ -414,7 +414,7 @@ export class PlayScene extends Phaser.Scene {
                     Player2.setVisible(false);
                     oppAttack.setVisible(true);
                     Player1.destroy();
-                    let Dead2 = this.add.sprite(180, 300, "dead_ply1").setDepth(1);
+                    let Dead2 = this.add.sprite(240, 300, "dead_ply1").setDepth(1);
                     Dead2.setScale(0.75);
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
