@@ -300,35 +300,7 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Earth2.on("pointerover", () => {
-                Earth2.setTint(0xff0000); // Turns red when mouse hovers over
-            })
-            Earth2.on("pointerout", () => {
-                Earth2.clearTint(); // Changes text back to normal tint
-            })
-            // Once card is clicked, deal damage
-            Earth2.on("pointerdown", () => {
-                Player2.setVisible(false);
-                oppAttack.setVisible(true);
-                oppAttack.setScale(.8)
-                if (Player1.health > 0) {
-                    damagePlayer(Player1);
-                    healthBar.scaleX = (Player1.health / Player1.maxHealth);
-                    healthStatus.setText(`${Player1.health}`);
-                };
-            })
-            Earth2.on('pointerup', () => {
-                Player2.setVisible(true);
-                oppAttack.setVisible(false);
-                if (Player1.health <= 0) {
-                    Player2.setVisible(false);
-                    oppAttack.setVisible(true);
-                    Player1.destroy();
-                    let Dead2 = this.add.sprite(180, 300, "dead_ply1").setDepth(1);
-                    Dead2.setScale(0.75);
-                    this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
-                }
-            Earth2.on("pointerover", () => {
-                Earth2.setTint(0xff0000); // Turns red when mouse hovers over
+                Earth2.setTint(0x3333FF); // Turns red when mouse hovers over
             })
             Earth2.on("pointerout", () => {
                 Earth2.clearTint(); // Changes text back to normal tint
@@ -359,7 +331,7 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Air2.on("pointerover", () => {
-                Air2.setTint(0xff0000); // Turns red when mouse hovers over
+                Air2.setTint(0x3333FF); // Turns red when mouse hovers over
             })
             Air2.on("pointerout", () => {
                 Air2.clearTint(); // Changes text back to normal tint
@@ -389,7 +361,7 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Fire2.on("pointerover", () => {
-                Fire2.setTint(0xff0000); // Turns red when mouse hovers over
+                Fire2.setTint(0x3333FF); // Turns red when mouse hovers over
             })
             Fire2.on("pointerout", () => {
                 Fire2.clearTint(); // Changes text back to normal tint
@@ -419,7 +391,7 @@ export class PlayScene extends Phaser.Scene {
             })
 
             Water2.on("pointerover", () => {
-                Water2.setTint(0xff0000); // Turns red when mouse hovers over
+                Water2.setTint(0x3333FF); // Turns red when mouse hovers over
             })
             Water2.on("pointerout", () => {
                 Water2.clearTint(); // Changes text back to normal tint
@@ -447,6 +419,5 @@ export class PlayScene extends Phaser.Scene {
                     this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "win").setDepth(1);
                 }
             })
-        })
-    };
-}
+        }
+    }
