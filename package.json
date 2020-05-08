@@ -15,7 +15,7 @@
     "url": "git+https://github.com/BrandynR/C_O_C.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Brandyn Reindel, John Knight, Adam Sedki",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BrandynR/C_O_C/issues"
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/BrandynR/C_O_C#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.16.1"
   }
 }

@@ -9,6 +9,16 @@ app.get('/', (req, res) => {
   console.log(__dirname);
 });
  
+/*dom.window.gameLoaded = () => {
+  let port = process.env.PORT;
+  if (port == null || port == "") {
+    port = 8082;
+  }
+  server.listen(port, function () {
+    console.log(`Listening on ${server.address().port}`);
+  });
+};*/
+
 server.listen(8081, function () {
   console.log(`Listening on ${server.address().port}`);
 });
