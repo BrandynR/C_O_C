@@ -22,6 +22,7 @@ export class PlayScene extends Phaser.Scene {
             console.log("THANX");
         }
         preload() {
+           //this.load.image("ground", "./assets.ground.png")
             this.load.image("wiz1", "./assets.firewiz.png")
             this.load.image("wiz2", "./assets.iceopponent.png")
             this.load.image("terrain", "./assets/forestday.png");
@@ -29,9 +30,9 @@ export class PlayScene extends Phaser.Scene {
             this.load.image("air", "./assets/air_card.png")
             this.load.image("fire", "./assets/fire_card.png")
             this.load.image("water", "./assets/water_card.png")
-            this.load.image('block', './assets/tiny2.png');
-            this.load.image('green-bar', './assets/healthbar-green.png');
-            this.load.image('red-bar', './assets/healthbar-red.png');
+            this.load.image("block", "./assets/tiny2.png");
+            this.load.image("green-bar", "./assets/healthbar-green.png");
+            this.load.image("red-bar", "./assets/healthbar-red.png");
             this.load.image("text", "./assets/Choose-Your-Attack.png");
             this.load.image("dead0", "./assets/dead0.png");
             this.load.image("dead1", "./assets/dead1.png");
@@ -49,7 +50,7 @@ export class PlayScene extends Phaser.Scene {
         create() {
             //Background image
             this.add.image(0, 0, "terrain").setOrigin(0).setDepth(0);
-            this.add.image(500, 740, "text").setDepth(1);
+            this.add.sprite(500, 740, "text").setDepth(2);
 
             //Player1 left wizard
             let Player1 = this.add.sprite(225, 300, "wiz1").setDepth(1);
