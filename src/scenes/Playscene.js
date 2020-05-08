@@ -53,7 +53,7 @@ export class PlayScene extends Phaser.Scene {
             this.add.sprite(500, 740, "text").setDepth(2);
 
             //Player1 left wizard
-            let Player1 = this.add.sprite(275, 300, "wiz1").setDepth(1);
+            let Player1 = this.add.sprite(275, 310, "wiz1").setDepth(1);
             Player1.setScale(0.75);
             Player1.health = 100;
             Player1.maxHealth = 100;
