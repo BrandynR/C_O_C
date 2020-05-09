@@ -18,7 +18,10 @@ app.get('/', (req, res) => {
     console.log(`Listening on ${server.address().port}`);
   });
 };*/
-
-server.listen(8082, function () {
-  console.log(`Listening on ${server.address().port}`);
+let port = process.env.PORT;
+  if (port == null || port == "") {
+    port = 8082;
+  }
+  server.listen(8082, function () {
+    console.log(`Listening on ${server.address().port}`);
 });
