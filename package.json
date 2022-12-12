@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/BrandynR/C_O_C#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "engines": {
     "node": "12.16.1"
